@@ -11,5 +11,8 @@ import UIKit
 class TreinoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nomeTreinoLabel: UILabel!
-
+    @IBOutlet weak var descricaoTreinoLabel: UILabel!
+    @IBOutlet weak var dataTreinoLabel: UILabel!
+    
+    
 }

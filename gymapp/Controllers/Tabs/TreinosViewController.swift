@@ -16,6 +16,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         treinosTableView.separatorStyle = .none
+        treinosTableView.allowsSelection = false
 
     }
     
