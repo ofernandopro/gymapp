@@ -14,6 +14,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var treinosTableView: UITableView!
     var auth: Auth!
     var handler: AuthStateDidChangeListenerHandle!
+    var cont = 7
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +43,28 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return cont + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let celula = tableView.dequeueReusableCell(withIdentifier: "treinoCelula", for: indexPath) as! TreinoTableViewCell
+        if indexPath.row == 0 {
         
-        celula.nomeTreinoLabel.text = "Treino 1"
-        
-        return celula
+            let celula = tableView.dequeueReusableCell(withIdentifier: "treinoPadraoCelula", for: indexPath) as! TreinoPadraoTableViewCell
+            
+            celula.nomeTreinoPadrao.text = "Treino Padrao"
+            
+            return celula
+            
+        } else {
+            
+            let celula = tableView.dequeueReusableCell(withIdentifier: "treinoCelula", for: indexPath) as! TreinoTableViewCell
+            
+            celula.nomeTreinoLabel.text = "Treino 1"
+            
+            return celula
+            
+        }
         
     }
     

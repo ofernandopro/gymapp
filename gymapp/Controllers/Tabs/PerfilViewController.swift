@@ -144,14 +144,9 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func exibirMensagem(titulo: String, mensagem: String) {
         
-        let alerta = UIAlertController(title: titulo,
-                                      message: mensagem,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok",
-                                     style: .default,
-                                     handler: nil)
+        let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
-        
         self.present(alerta, animated: true, completion: nil)
         
     }
