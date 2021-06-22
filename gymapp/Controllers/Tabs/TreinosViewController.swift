@@ -15,7 +15,6 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var treinosTableView: UITableView!
     var auth: Auth!
     var handler: AuthStateDidChangeListenerHandle!
-    var cont = 7
     var db: Firestore!
     var idUsuarioLogado: String!
     var listaTreinos: [Dictionary<String, Any>] = []
@@ -32,7 +31,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         treinosTableView.separatorStyle = .none
-        treinosTableView.allowsSelection = false
+        //treinosTableView.allowsSelection = false
         
         self.checaSeEstaLogado()
 
@@ -108,6 +107,24 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         }
         
+    }
+    
+    // Usado para abrir a tela de exercícios ao clicar em um treino:
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.treinosTableView.deselectRow(at: indexPath, animated: true)
+        let index = indexPath.row-1
+        let treino = self.listaTreinos[index]
+        
+        self.performSegue(withIdentifier: "exerciciosSegue", sender: treino)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "exerciciosSegue" {
+            let viewDestino = segue.destination as! ExerciciosViewController
+            viewDestino.treino = sender as? Dictionary
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
