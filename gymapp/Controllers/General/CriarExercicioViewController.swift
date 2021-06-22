@@ -14,12 +14,13 @@ import FirebaseFirestore
 class CriarExercicioViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var nomeExercicioLabel: UITextField!
-    @IBOutlet weak var imagemExercicio: UIButton!
+    @IBOutlet weak var imagemExercicio: UIImageView!
     @IBOutlet weak var observacoesExercicioLabel: UITextView!
     
     var auth: Auth!
     var storage: Storage!
     var db: Firestore!
+    var urlImagem = ""
     
     var treinoExercicios: Dictionary<String, Any>!
     
@@ -57,7 +58,6 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
     }
     
     
-    
     @IBAction func salvarExercicioButton(_ sender: Any) {
         
         if let nomeExercicio = nomeExercicioLabel.text {
@@ -67,8 +67,11 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
                     "id": uuid,
                     "idUsuario": idUsuarioLogado!,
                     "nome": nomeExercicio,
+                    "urlImagem": self.urlImagem,
                     "observacao": observacaoExercicio
                 ]
+                
+                salvarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
                 
                 self.salvarExercicioFirebase(dadosExercicio: dadosExercicio)
                 
@@ -85,15 +88,16 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
             UIImagePickerController.InfoKey.originalImage
         ] as! UIImage
         
-        salvarImagemExercicioFirebase(imagemRecuperada: imagemRecuperada)
+        self.imagemExercicio.image = imagemRecuperada
+        
+        //salvarImagemExercicioFirebase(imagemRecuperada: imagemRecuperada)
         
         imagePicker.dismiss(animated: true, completion: nil)
-        
     }
     
     func salvarImagemExercicioFirebase(imagemRecuperada: UIImage) {
         
-        self.imagemExercicio.imageView?.image = imagemRecuperada
+        self.imagemExercicio.image = imagemRecuperada
         
         let imagens = storage
             .reference()
@@ -103,8 +107,10 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
             
             if let usuarioLogado = auth.currentUser {
                 
+                let uuid = UUID().uuidString
+                
                 let idUsuario = usuarioLogado.uid
-                let nomeImagem = "\(idUsuario).jpg"
+                let nomeImagem = "\(uuid).jpg"
                 
                 
                 let fotoPerfilRef = imagens.child("perfil").child(nomeImagem)
