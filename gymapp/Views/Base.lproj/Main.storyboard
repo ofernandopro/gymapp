@@ -254,14 +254,14 @@
                     <view key="view" contentMode="scaleToFill" id="Xmk-r9-Gm6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="ae3-2f-KLg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Treinos" id="6qn-tg-D5t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMb-jA-Uzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="2457"/>
+            <point key="canvasLocation" x="895.6521739130435" y="2456.9196428571427"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="nH5-LD-kgT">
@@ -270,7 +270,57 @@
                     <view key="view" contentMode="scaleToFill" id="68A-W0-5bO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard-user-picture" translatesAutoresizingMaskIntoConstraints="NO" id="w32-Na-kUI">
+                                <rect key="frame" x="20" y="128" width="115" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="UQf-hw-BUe"/>
+                                    <constraint firstAttribute="height" constant="115" id="qd7-nM-pXg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="57"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-My-9jI">
+                                <rect key="frame" x="152" y="159" width="242" height="8"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89z-yr-fMm">
+                                        <rect key="frame" x="0.0" y="0.0" width="242" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDf-wM-EM6">
+                                        <rect key="frame" x="0.0" y="8" width="242" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky1-mm-kw5">
+                                <rect key="frame" x="20" y="251" width="112" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Escolher Imagem">
+                                    <color key="titleColor" red="0.86823842009999996" green="0.28318735750000001" blue="0.36476186700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="escolherImagemButton:" destination="iqQ-Ei-ktw" eventType="touchUpInside" id="C4v-A6-vl9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jDn-eG-hrc" firstAttribute="trailing" secondItem="eKe-My-9jI" secondAttribute="trailing" constant="20" id="6Pd-SA-kPW"/>
+                            <constraint firstItem="w32-Na-kUI" firstAttribute="leading" secondItem="jDn-eG-hrc" secondAttribute="leading" constant="20" id="99o-mz-m0N"/>
+                            <constraint firstItem="w32-Na-kUI" firstAttribute="top" secondItem="jDn-eG-hrc" secondAttribute="top" constant="40" id="Ked-WF-w4U"/>
+                            <constraint firstItem="ky1-mm-kw5" firstAttribute="leading" secondItem="jDn-eG-hrc" secondAttribute="leading" constant="20" id="WZu-dy-4nz"/>
+                            <constraint firstItem="ky1-mm-kw5" firstAttribute="top" secondItem="w32-Na-kUI" secondAttribute="bottom" constant="8" id="aTW-bh-9IQ"/>
+                            <constraint firstItem="eKe-My-9jI" firstAttribute="leading" secondItem="w32-Na-kUI" secondAttribute="trailing" constant="17" id="gMh-uG-iQd"/>
+                            <constraint firstItem="eKe-My-9jI" firstAttribute="top" secondItem="jDn-eG-hrc" secondAttribute="top" constant="71" id="gPg-8G-Q49"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jDn-eG-hrc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="WT3-TK-hxF">
@@ -281,10 +331,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="xDf-wM-EM6" id="Fdg-Mi-SOt"/>
+                        <outlet property="fotoPerfilImageView" destination="w32-Na-kUI" id="XOm-hR-9JX"/>
+                        <outlet property="nomeLabel" destination="89z-yr-fMm" id="WbL-Iu-acM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kge-sP-Xk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2071" y="2457"/>
+            <point key="canvasLocation" x="2069.5652173913045" y="2456.9196428571427"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lBn-cq-L9j">
@@ -294,7 +349,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LEO-9o-1sK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="hTJ-xb-hNQ" kind="relationship" relationship="viewControllers" id="dJ1-BA-1oQ"/>
@@ -323,11 +379,13 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="oxT-zv-Tvf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hTJ-xb-hNQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KLR-2s-pcn"/>
+                    <tabBarItem key="tabBarItem" title="" image="gym-icon" selectedImage="gym-icon" id="KLR-2s-pcn">
+                        <color key="badgeColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qHU-Vu-iAq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -342,11 +400,13 @@
             </objects>
             <point key="canvasLocation" x="897" y="1714"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="ciQ-iC-u6f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ck1-nC-rX2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yci-n8-12r"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="" image="person-icon" selectedImage="person-icon" id="yci-n8-12r">
+                        <color key="badgeColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="24T-dk-m4x">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -366,6 +426,9 @@
         <segue reference="NKE-HW-2En"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="gym-icon" width="37.5" height="37.5"/>
         <image name="logo" width="512" height="512"/>
+        <image name="person-icon" width="35" height="35"/>
+        <image name="standard-user-picture" width="200" height="200"/>
     </resources>
 </document>

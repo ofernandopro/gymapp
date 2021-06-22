@@ -39,32 +39,37 @@ class CriarContaViewController: UIViewController {
                 if let senhaUsuario = senhaLabel.text {
                     if let confirmarSenhaUsuario = confirmarSenhaLabel.text {
                         
-                        if senhaUsuario == confirmarSenhaUsuario {
-                           
-                            auth.createUser(withEmail: emailUsuario, password: senhaUsuario) { (resultData, error) in
-                                
-                                if error == nil {
+                        if nomeUsuario == "" {
+                            self.exibirMensagem(titulo: "Erro", mensagem: "Digite seu nome!")
+                        } else {
+                        
+                            if senhaUsuario == confirmarSenhaUsuario {
+                               
+                                auth.createUser(withEmail: emailUsuario, password: senhaUsuario) { (resultData, error) in
                                     
-                                    // Save user data on firebase firestore with name
-                                    if let idUsuario = resultData?.user.uid {
-                                        self.db.collection("usuarios")
-                                        .document(idUsuario)
-                                        .setData([
-                                            "nome": nomeUsuario,
-                                            "email": emailUsuario,
-                                            "id": idUsuario
-                                        ])
+                                    if error == nil {
+                                        
+                                        // Save user data on firebase firestore with name
+                                        if let idUsuario = resultData?.user.uid {
+                                            self.db.collection("usuarios")
+                                            .document(idUsuario)
+                                            .setData([
+                                                "nome": nomeUsuario,
+                                                "email": emailUsuario,
+                                                "id": idUsuario
+                                            ])
+                                        }
+                                        
+                                        self.performSegue(withIdentifier: "criarContaSegue", sender: nil)
+                                    } else {
+                                        self.exibirMensagem(titulo: "Erro", mensagem: "Falha ao criar sua conta. Tente novamente!")
                                     }
                                     
-                                    self.performSegue(withIdentifier: "criarContaSegue", sender: nil)
-                                } else {
-                                    self.exibirMensagem(titulo: "Erro", mensagem: "Falha ao criar sua conta. Tente novamente!")
                                 }
                                 
+                            } else {
+                                self.exibirMensagem(titulo: "Erro", mensagem: "Senha e Confirmar Senha não são iguais.")
                             }
-                            
-                        } else {
-                            self.exibirMensagem(titulo: "Erro", mensagem: "Senha e Confirmar Senha não são iguais.")
                         }
                         
                     } else {
@@ -76,8 +81,6 @@ class CriarContaViewController: UIViewController {
             } else {
                 self.exibirMensagem(titulo: "Erro", mensagem: "Digite seu email!")
             }
-        } else {
-            self.exibirMensagem(titulo: "Erro", mensagem: "Digite seu nome!")
         }
         
     }
