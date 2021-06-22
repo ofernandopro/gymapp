@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,17 +16,52 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     var auth: Auth!
     var handler: AuthStateDidChangeListenerHandle!
     var cont = 7
+    var db: Firestore!
+    var idUsuarioLogado: String!
+    var listaTreinos: [Dictionary<String, Any>] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         auth = Auth.auth()
+        db = Firestore.firestore()
+        
+        // Recupera id do usuário logado:
+        if let id = auth.currentUser?.uid {
+            self.idUsuarioLogado = id
+        }
         
         treinosTableView.separatorStyle = .none
         treinosTableView.allowsSelection = false
         
         self.checaSeEstaLogado()
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        recuperarTreinos()
+    }
+    
+    func recuperarTreinos() {
+        
+        self.listaTreinos.removeAll()
+        db.collection("usuarios")
+        .document(idUsuarioLogado)
+        .collection("treinos")
+            .getDocuments { (snapshotResult, error) in
+                
+                if let snapshot = snapshotResult {
+                    for document in snapshot.documents {
+                        
+                        let dadosTreino = document.data()
+                        self.listaTreinos.append(dadosTreino)
+                        
+                    }
+                    self.treinosTableView.reloadData()
+                }
+                
+        }
+        
     }
     
     // Verifica se o usuário está logado ou não (usado para redirecionar
@@ -43,7 +79,8 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cont + 1
+        let totalTreinos = self.listaTreinos.count
+        return totalTreinos + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,7 +89,8 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         
             let celula = tableView.dequeueReusableCell(withIdentifier: "treinoPadraoCelula", for: indexPath) as! TreinoPadraoTableViewCell
             
-            celula.nomeTreinoPadrao.text = "Treino Padrao"
+            celula.nomeTreinoPadrao.text = "Treino Padrão"
+            celula.descricaoTreinoPadrao.text = "Treino padrão para braços e pernas."
             
             return celula
             
@@ -60,7 +98,11 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             let celula = tableView.dequeueReusableCell(withIdentifier: "treinoCelula", for: indexPath) as! TreinoTableViewCell
             
-            celula.nomeTreinoLabel.text = "Treino 1"
+            let dadosTreino = self.listaTreinos[indexPath.row-1]
+            
+            celula.nomeTreinoLabel.text = dadosTreino["nome"] as? String
+            celula.descricaoTreinoLabel.text = dadosTreino["descricao"] as? String
+            celula.dataTreinoLabel.text = dadosTreino["data"] as? String
             
             return celula
             

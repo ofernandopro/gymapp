@@ -433,30 +433,30 @@
         <!--Criar Treino View Controller-->
         <scene sceneID="NFS-BV-FxJ">
             <objects>
-                <viewController id="ldR-6N-w8B" customClass="CriarTreinoViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ldR-6N-w8B" customClass="CriarTreinoViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDg-Ab-dtx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Exemplo: Treino para Bíceps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-e0-zJ0">
-                                <rect key="frame" x="20" y="97.666666666666671" width="335" height="34.000000000000014"/>
+                                <rect key="frame" x="20" y="141.66666666666666" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4c-JI-YS0">
-                                <rect key="frame" x="20" y="59.999999999999993" width="335" height="22.666666666666664"/>
+                                <rect key="frame" x="20" y="104" width="335" height="22.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição (Opcional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-0N-B4d">
-                                <rect key="frame" x="20" y="166.66666666666666" width="335" height="23"/>
+                                <rect key="frame" x="20" y="210.66666666666666" width="335" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bsd-ml-HfM">
-                                <rect key="frame" x="20" y="204.66666666666666" width="335" height="99.999999999999972"/>
+                                <rect key="frame" x="20" y="248.66666666666663" width="335" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="NH8-0J-wDV"/>
@@ -471,7 +471,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-1i-cvk">
-                                <rect key="frame" x="235" y="354.66666666666669" width="120" height="40"/>
+                                <rect key="frame" x="235" y="398.66666666666669" width="120" height="40"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Vu5-cW-3wc"/>
@@ -491,7 +491,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWE-lT-hwj">
-                                <rect key="frame" x="100" y="354.66666666666669" width="120" height="40"/>
+                                <rect key="frame" x="100" y="398.66666666666669" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="dnL-MN-EIX"/>
                                     <constraint firstAttribute="height" constant="40" id="pJJ-Ni-20z"/>
@@ -573,8 +573,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky1-mm-kw5">
-                                <rect key="frame" x="20" y="251" width="112" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="20" y="251" width="129" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <state key="normal" title="Escolher Imagem">
                                     <color key="titleColor" red="0.86823842009999996" green="0.28318735750000001" blue="0.36476186700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -703,7 +703,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="azh-Bb-zNJ"/>
+        <segue reference="ALd-p5-jTV"/>
         <segue reference="pVb-oL-t4s"/>
     </inferredMetricsTieBreakers>
     <resources>
