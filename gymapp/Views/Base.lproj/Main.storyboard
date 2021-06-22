@@ -250,14 +250,91 @@
         <!--Treinos-->
         <scene sceneID="tzg-Ju-cDa">
             <objects>
-                <viewController id="g7F-hG-Jyv" sceneMemberID="viewController">
+                <viewController id="g7F-hG-Jyv" customClass="TreinosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xmk-r9-Gm6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnM-iE-d5v">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treinoCelula" rowHeight="149" id="FPH-TT-v2l" customClass="TreinoTableViewCell" customModule="gymapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="149"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPH-TT-v2l" id="I1m-8B-W1J">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-CW-Mqh">
+                                                    <rect key="frame" x="20" y="28" width="374" height="93"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Treino 124412" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHp-dK-zMe">
+                                                            <rect key="frame" x="20" y="15" width="334" height="23"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Treino para biceps e triceps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr2-wE-gJg">
+                                                            <rect key="frame" x="20" y="52" width="334" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="wr2-wE-gJg" secondAttribute="trailing" constant="20" id="Cdv-pp-dfO"/>
+                                                        <constraint firstItem="wr2-wE-gJg" firstAttribute="top" secondItem="CHp-dK-zMe" secondAttribute="bottom" constant="15" id="J57-Zo-c9k"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wr2-wE-gJg" secondAttribute="bottom" constant="20" id="Rf6-rw-gaU"/>
+                                                        <constraint firstItem="CHp-dK-zMe" firstAttribute="top" secondItem="Vys-CW-Mqh" secondAttribute="top" constant="15" id="a1y-Ik-q3Q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CHp-dK-zMe" secondAttribute="trailing" constant="20" id="rBe-bV-CGf"/>
+                                                        <constraint firstItem="CHp-dK-zMe" firstAttribute="leading" secondItem="Vys-CW-Mqh" secondAttribute="leading" constant="20" id="rCf-AW-pbY"/>
+                                                        <constraint firstItem="wr2-wE-gJg" firstAttribute="leading" secondItem="Vys-CW-Mqh" secondAttribute="leading" constant="20" id="zYI-Sf-DMf"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vys-CW-Mqh" firstAttribute="trailing" secondItem="I1m-8B-W1J" secondAttribute="trailingMargin" id="LQA-TA-PFS"/>
+                                                <constraint firstItem="Vys-CW-Mqh" firstAttribute="top" secondItem="I1m-8B-W1J" secondAttribute="topMargin" constant="17" id="V5j-Q0-QAL"/>
+                                                <constraint firstItem="Vys-CW-Mqh" firstAttribute="leading" secondItem="I1m-8B-W1J" secondAttribute="leadingMargin" id="pZl-Ew-RKx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Vys-CW-Mqh" secondAttribute="bottom" constant="17" id="sWi-CO-bte"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="nomeTreinoLabel" destination="CHp-dK-zMe" id="fEo-px-O9c"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="g7F-hG-Jyv" id="RBx-mQ-3ch"/>
+                                    <outlet property="delegate" destination="g7F-hG-Jyv" id="Mp7-ao-y7d"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pnM-iE-d5v" firstAttribute="top" secondItem="ae3-2f-KLg" secondAttribute="top" id="Lk6-2J-Z4m"/>
+                            <constraint firstItem="pnM-iE-d5v" firstAttribute="leading" secondItem="ae3-2f-KLg" secondAttribute="leading" id="SBN-Hp-bpZ"/>
+                            <constraint firstItem="pnM-iE-d5v" firstAttribute="trailing" secondItem="ae3-2f-KLg" secondAttribute="trailing" id="V45-mE-4kr"/>
+                            <constraint firstItem="pnM-iE-d5v" firstAttribute="bottom" secondItem="ae3-2f-KLg" secondAttribute="bottom" id="Y31-ot-Dpu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ae3-2f-KLg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Treinos" id="6qn-tg-D5t"/>
+                    <navigationItem key="navigationItem" title="Treinos" id="6qn-tg-D5t">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qvt-YZ-ZML">
+                            <color key="tintColor" red="0.86823842009999996" green="0.28318735750000001" blue="0.36476186700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="treinosTableView" destination="pnM-iE-d5v" id="OXz-lR-FOU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMb-jA-Uzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

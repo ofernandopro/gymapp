@@ -17,6 +17,8 @@
 		C4D60B7B26812E9D00255E46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B7A26812E9D00255E46 /* LoginViewController.swift */; };
 		C4D60B7D268130DA00255E46 /* CriarContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B7C268130DA00255E46 /* CriarContaViewController.swift */; };
 		C4D60B802681489400255E46 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B7F2681489400255E46 /* PerfilViewController.swift */; };
+		C4D60B822681798800255E46 /* TreinosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B812681798800255E46 /* TreinosViewController.swift */; };
+		C4D60B8526817AAB00255E46 /* TreinoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B8426817AAB00255E46 /* TreinoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C4D60B7A26812E9D00255E46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4D60B7C268130DA00255E46 /* CriarContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContaViewController.swift; sourceTree = "<group>"; };
 		C4D60B7F2681489400255E46 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		C4D60B812681798800255E46 /* TreinosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinosViewController.swift; sourceTree = "<group>"; };
+		C4D60B8426817AAB00255E46 /* TreinoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		C4B208AC2681290D00032FC8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C4D60B8326817A8B00255E46 /* Cells */,
 				C4D60B7E2681488000255E46 /* Tabs */,
 				C4D60B7926812E8600255E46 /* Onboarding */,
 			);
@@ -144,8 +149,17 @@
 			isa = PBXGroup;
 			children = (
 				C4D60B7F2681489400255E46 /* PerfilViewController.swift */,
+				C4D60B812681798800255E46 /* TreinosViewController.swift */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C4D60B8326817A8B00255E46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C4D60B8426817AAB00255E46 /* TreinoTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D60B7B26812E9D00255E46 /* LoginViewController.swift in Sources */,
+				C4D60B822681798800255E46 /* TreinosViewController.swift in Sources */,
 				C4B20897268128F200032FC8 /* AppDelegate.swift in Sources */,
 				C4D60B7D268130DA00255E46 /* CriarContaViewController.swift in Sources */,
 				C4B20899268128F200032FC8 /* SceneDelegate.swift in Sources */,
+				C4D60B8526817AAB00255E46 /* TreinoTableViewCell.swift in Sources */,
 				C4D60B802681489400255E46 /* PerfilViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
