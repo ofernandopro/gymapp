@@ -151,8 +151,8 @@
 		C4D60B7E2681488000255E46 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				C4D60B7F2681489400255E46 /* PerfilViewController.swift */,
 				C4D60B812681798800255E46 /* TreinosViewController.swift */,
+				C4D60B7F2681489400255E46 /* PerfilViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";

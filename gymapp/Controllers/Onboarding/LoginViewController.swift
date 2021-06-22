@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
                 
         auth = Auth.auth()
         
-        self.checaSeEstaLogado()
+        
 
     }
     
@@ -58,16 +58,6 @@ class LoginViewController: UIViewController {
         
     }
     
-    // Verifica se o usuário está logado ou não (usado para redirecionar
-    // o usuário para a tela de login se não estiver logado):
-    func checaSeEstaLogado() {
-        handler = auth.addStateDidChangeListener { (authentication, user) in
-            if user != nil {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            }
-        }
-    }
-    
     func exibirMensagem(titulo: String, mensagem: String) {
         
         let alerta = UIAlertController(title: titulo,
@@ -84,7 +74,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
-        auth.removeStateDidChangeListener(handler)
+        //auth.removeStateDidChangeListener(handler)
         
         super.viewWillAppear(animated)
         setNeedsStatusBarAppearanceUpdate()

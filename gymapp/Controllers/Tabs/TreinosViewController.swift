@@ -7,17 +7,34 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var treinosTableView: UITableView!
+    var auth: Auth!
+    var handler: AuthStateDidChangeListenerHandle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        auth = Auth.auth()
+        
         treinosTableView.separatorStyle = .none
         treinosTableView.allowsSelection = false
+        
+        self.checaSeEstaLogado()
 
+    }
+    
+    // Verifica se o usuário está logado ou não (usado para redirecionar
+    // o usuário para a tela de login se não estiver logado):
+    func checaSeEstaLogado() {
+        handler = auth.addStateDidChangeListener { (authentication, user) in
+            if user == nil {
+                self.performSegue(withIdentifier: "toLoginSegue", sender: nil)
+            }
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,6 +53,10 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return celula
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        auth.removeStateDidChangeListener(handler)
     }
 
 }

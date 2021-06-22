@@ -134,7 +134,8 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         do {
             try auth.signOut()
-            dismiss(animated: true, completion: nil)
+            //dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "sairSegue", sender: nil)
         } catch {
             self.exibirMensagem(titulo: "Erro", mensagem: "Erro ao deslogar. Tente novamente!")
         }
