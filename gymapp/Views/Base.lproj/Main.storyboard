@@ -252,11 +252,11 @@
             <objects>
                 <viewController id="g7F-hG-Jyv" customClass="TreinosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xmk-r9-Gm6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnM-iE-d5v">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treinoPadraoCelula" rowHeight="149" id="FPH-TT-v2l" customClass="TreinoPadraoTableViewCell" customModule="gymapp" customModuleProvider="target">
@@ -338,7 +338,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Treino 124412" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUf-yE-0Lr">
                                                             <rect key="frame" x="13" y="8" width="129" height="23"/>
                                                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.34625522219999999" green="0.1129356858" blue="0.1454677637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/06/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7D-U7-3yP">
@@ -447,13 +447,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4c-JI-YS0">
                                 <rect key="frame" x="20" y="128" width="374" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição (Opcional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-0N-B4d">
                                 <rect key="frame" x="20" y="214.5" width="374" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bsd-ml-HfM">
@@ -494,7 +494,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Treino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9J-Qs-QxH">
                                 <rect key="frame" x="20" y="69" width="374" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWE-lT-hwj">
@@ -545,82 +545,129 @@
             </objects>
             <point key="canvasLocation" x="336.23188405797106" y="3193.5267857142858"/>
         </scene>
-        <!--Exercicios View Controller-->
+        <!--Exercícios-->
         <scene sceneID="sfP-1B-AJf">
             <objects>
                 <viewController id="M1l-7A-jf0" customClass="ExerciciosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="suO-Ms-MH7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sle-oE-pcO">
-                                <rect key="frame" x="20" y="179.5" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlB-wN-nT1">
-                                <rect key="frame" x="0.0" y="250" width="414" height="593"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="86.5" width="414" height="638.5"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exercicioCelula" rowHeight="230" id="2Xv-AH-zp4">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="230"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exercicioCelula" rowHeight="324" id="2Xv-AH-zp4" customClass="ExercicioTableViewCell" customModule="gymapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="324"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Xv-AH-zp4" id="sZA-8l-hwX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-Mq-V2H">
+                                                    <rect key="frame" x="20" y="26" width="374" height="287"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exercicio" translatesAutoresizingMaskIntoConstraints="NO" id="4gJ-10-uzi">
+                                                            <rect key="frame" x="12" y="12" width="350" height="145"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="145" id="VSL-0B-XCo"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cadeira Tríceps" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQM-GP-JqO">
+                                                            <rect key="frame" x="12" y="167" width="350" height="26"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cadeira Tríceps. Sente-se sobre uma cadeira e, com as mãos para trás, faça agachamentos." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3m-oc-aAp">
+                                                            <rect key="frame" x="12" y="201" width="350" height="61"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" red="0.34625522219999999" green="0.1129356858" blue="0.1454677637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="4gJ-10-uzi" secondAttribute="trailing" constant="12" id="0AK-F1-XEW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="l3m-oc-aAp" secondAttribute="bottom" constant="15" id="DLw-Ui-Pxl"/>
+                                                        <constraint firstItem="l3m-oc-aAp" firstAttribute="top" secondItem="bQM-GP-JqO" secondAttribute="bottom" constant="13" id="MF4-UD-5Cs"/>
+                                                        <constraint firstItem="4gJ-10-uzi" firstAttribute="top" secondItem="C1I-Mq-V2H" secondAttribute="top" constant="12" id="dIM-uf-YxK"/>
+                                                        <constraint firstItem="l3m-oc-aAp" firstAttribute="leading" secondItem="C1I-Mq-V2H" secondAttribute="leading" constant="12" id="eEK-xY-ceu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="l3m-oc-aAp" secondAttribute="trailing" constant="12" id="hd8-ZR-uPP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bQM-GP-JqO" secondAttribute="trailing" constant="12" id="llb-Op-AqV"/>
+                                                        <constraint firstAttribute="bottom" secondItem="l3m-oc-aAp" secondAttribute="bottom" constant="15" id="oSb-ft-1Kq"/>
+                                                        <constraint firstItem="bQM-GP-JqO" firstAttribute="top" secondItem="4gJ-10-uzi" secondAttribute="bottom" constant="13" id="p3l-nY-sFd"/>
+                                                        <constraint firstItem="4gJ-10-uzi" firstAttribute="leading" secondItem="C1I-Mq-V2H" secondAttribute="leading" constant="12" id="rN3-I9-a28"/>
+                                                        <constraint firstItem="bQM-GP-JqO" firstAttribute="leading" secondItem="C1I-Mq-V2H" secondAttribute="leading" constant="12" id="tzg-GJ-xeJ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="C1I-Mq-V2H" firstAttribute="bottom" secondItem="sZA-8l-hwX" secondAttribute="bottomMargin" id="nFA-My-Ny2"/>
+                                                <constraint firstItem="C1I-Mq-V2H" firstAttribute="top" secondItem="sZA-8l-hwX" secondAttribute="topMargin" constant="15" id="sp2-9O-tAn"/>
+                                                <constraint firstItem="C1I-Mq-V2H" firstAttribute="leading" secondItem="sZA-8l-hwX" secondAttribute="leadingMargin" id="sua-WN-yGt"/>
+                                                <constraint firstItem="C1I-Mq-V2H" firstAttribute="trailing" secondItem="sZA-8l-hwX" secondAttribute="trailingMargin" id="t4V-OW-mQn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="exercicioImagem" destination="4gJ-10-uzi" id="FUH-3T-FbH"/>
+                                            <outlet property="nomeExercicioLabel" destination="bQM-GP-JqO" id="Xjz-OQ-Xai"/>
+                                            <outlet property="observacaoExercicioLabel" destination="l3m-oc-aAp" id="qcW-V9-ovP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="M1l-7A-jf0" id="YkC-KE-X14"/>
                                     <outlet property="delegate" destination="M1l-7A-jf0" id="KnK-vU-DHh"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-Lr-1XP">
-                                <rect key="frame" x="20" y="123" width="374" height="31.5"/>
+                                <rect key="frame" x="20" y="35" width="374" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.8509054184" green="0.85102838280000004" blue="0.8508786559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sle-oE-pcO" firstAttribute="top" secondItem="Drx-Lr-1XP" secondAttribute="bottom" constant="25" id="18s-FZ-hLo"/>
                             <constraint firstItem="sL4-oo-rhO" firstAttribute="trailing" secondItem="Drx-Lr-1XP" secondAttribute="trailing" constant="20" id="2Ef-ca-8TI"/>
-                            <constraint firstAttribute="bottom" secondItem="mlB-wN-nT1" secondAttribute="bottom" constant="-30" id="Cpt-ha-dqQ"/>
+                            <constraint firstAttribute="bottom" secondItem="mlB-wN-nT1" secondAttribute="bottom" id="Cpt-ha-dqQ"/>
                             <constraint firstItem="mlB-wN-nT1" firstAttribute="leading" secondItem="sL4-oo-rhO" secondAttribute="leading" id="IaQ-uX-nQJ"/>
-                            <constraint firstItem="mlB-wN-nT1" firstAttribute="top" secondItem="sle-oE-pcO" secondAttribute="bottom" constant="50" id="J7c-Ji-VKE"/>
                             <constraint firstItem="Drx-Lr-1XP" firstAttribute="top" secondItem="sL4-oo-rhO" secondAttribute="top" constant="35" id="XlP-cV-NRO"/>
-                            <constraint firstItem="sle-oE-pcO" firstAttribute="leading" secondItem="sL4-oo-rhO" secondAttribute="leading" constant="20" id="nb1-hf-3R5"/>
+                            <constraint firstItem="mlB-wN-nT1" firstAttribute="top" secondItem="Drx-Lr-1XP" secondAttribute="bottom" constant="20" id="cyA-IT-xZd"/>
                             <constraint firstItem="mlB-wN-nT1" firstAttribute="trailing" secondItem="sL4-oo-rhO" secondAttribute="trailing" id="pN0-ey-u7S"/>
-                            <constraint firstItem="sL4-oo-rhO" firstAttribute="trailing" secondItem="sle-oE-pcO" secondAttribute="trailing" constant="20" id="pY1-3h-06M"/>
                             <constraint firstItem="Drx-Lr-1XP" firstAttribute="leading" secondItem="sL4-oo-rhO" secondAttribute="leading" constant="20" id="uOd-0J-ww3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sL4-oo-rhO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zTc-R7-upU">
+                    <navigationItem key="navigationItem" title="Exercícios" id="zTc-R7-upU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="73V-0C-x7w">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addExercicioButton:" destination="M1l-7A-jf0" id="zwT-ry-sKi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descricaoTreinoLabel" destination="sle-oE-pcO" id="he5-di-vPq"/>
                         <outlet property="nomeTreinoLabel" destination="Drx-Lr-1XP" id="dde-zc-jrd"/>
+                        <outlet property="tableViewExercicios" destination="mlB-wN-nT1" id="Zjs-mx-q1G"/>
                         <segue destination="Lj0-7O-9XS" kind="presentation" identifier="addExercicioSegue" id="Cgl-p3-5Aq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTY-UJ-6jD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="3193.5960591133007"/>
+            <point key="canvasLocation" x="1426.0869565217392" y="3193.5267857142858"/>
         </scene>
         <!--Criar Exercicio View Controller-->
         <scene sceneID="ehX-SD-Gej">
@@ -633,25 +680,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Exercício" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fra-Pp-vet">
                                 <rect key="frame" x="16" y="69" width="382" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmJ-yM-mZC">
                                 <rect key="frame" x="20" y="128" width="374" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observações:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9A-Cr-GBY">
                                 <rect key="frame" x="20" y="435.5" width="374" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagem:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-IR-t0n">
                                 <rect key="frame" x="20" y="214.5" width="374" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do exercício..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-IV-J3w">
@@ -709,7 +756,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGl-vL-Wl1">
                                 <rect key="frame" x="40" y="387.5" width="334" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Selecionar Imagem"/>
+                                <state key="normal" title="Selecionar Imagem">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="pegarImagemExercicioButton:" destination="Lj0-7O-9XS" eventType="touchUpInside" id="VQv-Ki-9ki"/>
                                 </connections>
@@ -903,10 +952,11 @@
                         <color key="badgeColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qHU-Vu-iAq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="qHU-Vu-iAq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -951,6 +1001,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="escolha-treino" width="335" height="130"/>
+        <image name="exercicio" width="800" height="445"/>
         <image name="gym-icon" width="37.5" height="37.5"/>
         <image name="logo" width="512" height="512"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
