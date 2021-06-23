@@ -103,7 +103,7 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
             .reference()
             .child("imagens")
         
-        if let imagemUpload = imagemRecuperada.jpegData(compressionQuality: 0.7) {
+        if let imagemUpload = imagemRecuperada.jpegData(compressionQuality: 0.5) {
             
             if let usuarioLogado = auth.currentUser {
                 

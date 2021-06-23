@@ -148,5 +148,29 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    // Método para remover Exercício
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            let dadosExercicio = self.listaExercicios[indexPath.row]
+    
+            // Removendo do Firebase
+            self.db
+              .collection("usuarios")
+            .document(idUsuarioLogado)
+            .collection("treinos")
+                .document(treino["id"] as! String)
+            .collection("exercicios")
+            .document(dadosExercicio["id"] as! String)
+              .delete()
+            
+            // Removendo do Array
+            self.listaExercicios.remove(at: indexPath.row)
+            // Removendo da Table View
+            self.tableViewExercicios.deleteRows(at: [indexPath], with: .automatic)
+        }
+            
+    }
+    
 
 }

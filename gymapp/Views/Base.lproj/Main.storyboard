@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wR7-HT-qT8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pWw-XA-MzW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CBS-gG-t6X">
@@ -134,7 +134,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="laf-iK-5gc" customClass="CriarContaViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJ0-86-0RJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAL-nK-ea1">
@@ -508,7 +508,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="dataTreinoLabel" destination="u7D-U7-3yP" id="Ngo-Sa-9eb"/>
+                                            <outlet property="dataTreino" destination="u7D-U7-3yP" id="umL-P5-Ys0"/>
                                             <outlet property="descricaoTreinoLabel" destination="flh-cV-r1b" id="PYr-8A-Bzo"/>
                                             <outlet property="nomeTreinoLabel" destination="pUf-yE-0Lr" id="9In-PG-5IP"/>
                                         </connections>
@@ -539,7 +539,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="treinosTableView" destination="pnM-iE-d5v" id="OXz-lR-FOU"/>
-                        <segue destination="pWw-XA-MzW" kind="show" identifier="toLoginSegue" id="azh-Bb-zNJ"/>
                         <segue destination="M1l-7A-jf0" kind="show" identifier="exerciciosSegue" id="IG1-d1-1aN"/>
                         <segue destination="tdB-Qd-DhP" kind="presentation" identifier="editarTreinoSegue" id="X6h-7r-Pgz"/>
                     </connections>
@@ -1169,8 +1168,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="azh-Bb-zNJ"/>
-        <segue reference="pVb-oL-t4s"/>
+        <segue reference="NKE-HW-2En"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="escolha-treino" width="335" height="130"/>
