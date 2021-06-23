@@ -17,6 +17,7 @@
 		C4B208A0268128F400032FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B2089F268128F400032FC8 /* Assets.xcassets */; };
 		C4B208A3268128F400032FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B208A1268128F400032FC8 /* LaunchScreen.storyboard */; };
 		C4B208AF268129F700032FC8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B208AE268129F700032FC8 /* GoogleService-Info.plist */; };
+		C4C9930126837CBA0021C76E /* DetalhesExercicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C9930026837CBA0021C76E /* DetalhesExercicioViewController.swift */; };
 		C4D1E0B62682B6C0004A47B1 /* ExercicioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D1E0B52682B6C0004A47B1 /* ExercicioTableViewCell.swift */; };
 		C4D60B7B26812E9D00255E46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B7A26812E9D00255E46 /* LoginViewController.swift */; };
 		C4D60B7D268130DA00255E46 /* CriarContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B7C268130DA00255E46 /* CriarContaViewController.swift */; };
@@ -24,6 +25,7 @@
 		C4D60B822681798800255E46 /* TreinosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B812681798800255E46 /* TreinosViewController.swift */; };
 		C4D60B8526817AAB00255E46 /* TreinoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B8426817AAB00255E46 /* TreinoTableViewCell.swift */; };
 		C4D60B88268187F800255E46 /* CriarTreinoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D60B87268187F700255E46 /* CriarTreinoViewController.swift */; };
+		C4FADCEB268383B600437998 /* EditarTreinoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FADCEA268383B600437998 /* EditarTreinoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,7 @@
 		C4B208A2268128F400032FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4B208A4268128F400032FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B208AE268129F700032FC8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4C9930026837CBA0021C76E /* DetalhesExercicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesExercicioViewController.swift; sourceTree = "<group>"; };
 		C4D1E0B52682B6C0004A47B1 /* ExercicioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicioTableViewCell.swift; sourceTree = "<group>"; };
 		C4D60B7A26812E9D00255E46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4D60B7C268130DA00255E46 /* CriarContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarContaViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		C4D60B812681798800255E46 /* TreinosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinosViewController.swift; sourceTree = "<group>"; };
 		C4D60B8426817AAB00255E46 /* TreinoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinoTableViewCell.swift; sourceTree = "<group>"; };
 		C4D60B87268187F700255E46 /* CriarTreinoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarTreinoViewController.swift; sourceTree = "<group>"; };
+		C4FADCEA268383B600437998 /* EditarTreinoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarTreinoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 				C4D60B87268187F700255E46 /* CriarTreinoViewController.swift */,
 				C44FF9172682327D00A6D572 /* ExerciciosViewController.swift */,
 				C44FF919268254AB00A6D572 /* CriarExercicioViewController.swift */,
+				C4C9930026837CBA0021C76E /* DetalhesExercicioViewController.swift */,
+				C4FADCEA268383B600437998 /* EditarTreinoViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -311,7 +317,9 @@
 				C4B20899268128F200032FC8 /* SceneDelegate.swift in Sources */,
 				C4D60B8526817AAB00255E46 /* TreinoTableViewCell.swift in Sources */,
 				C4D1E0B62682B6C0004A47B1 /* ExercicioTableViewCell.swift in Sources */,
+				C4FADCEB268383B600437998 /* EditarTreinoViewController.swift in Sources */,
 				C44FF9182682327D00A6D572 /* ExerciciosViewController.swift in Sources */,
+				C4C9930126837CBA0021C76E /* DetalhesExercicioViewController.swift in Sources */,
 				C4D60B802681489400255E46 /* PerfilViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

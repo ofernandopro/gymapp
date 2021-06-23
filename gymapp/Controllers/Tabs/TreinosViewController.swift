@@ -37,30 +37,37 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     }
     
+    
+    
+    
     override func viewDidAppear(_ animated: Bool) {
-        recuperarTreinos()
+        handler = auth.addStateDidChangeListener { (authentication, user) in
+            if user != nil {
+                self.recuperarTreinos()
+            } else {
+                self.performSegue(withIdentifier: "toLoginSegue", sender: nil)
+            }
+        }
     }
     
     func recuperarTreinos() {
         
-        self.listaTreinos.removeAll()
-        db.collection("usuarios")
-        .document(idUsuarioLogado)
-        .collection("treinos")
-            .getDocuments { (snapshotResult, error) in
-                
-                if let snapshot = snapshotResult {
-                    for document in snapshot.documents {
-                        
-                        let dadosTreino = document.data()
-                        self.listaTreinos.append(dadosTreino)
-                        
+            self.listaTreinos.removeAll()
+            self.db.collection("usuarios")
+                .document(idUsuarioLogado)
+            .collection("treinos")
+                .getDocuments { (snapshotResult, error) in
+                    
+                    if let snapshot = snapshotResult {
+                        for document in snapshot.documents {
+                            
+                            let dadosTreino = document.data()
+                            self.listaTreinos.append(dadosTreino)
+                            
+                        }
+                        self.treinosTableView.reloadData()
                     }
-                    self.treinosTableView.reloadData()
                 }
-                
-        }
-        
     }
     
     // Verifica se o usuário está logado ou não (usado para redirecionar
@@ -99,9 +106,18 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             let dadosTreino = self.listaTreinos[indexPath.row-1]
             
+            /*
+            let retrievedDate = dadosTreino["data"]
+            // Formats date:
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            
+            let newDate = dateFormatter.string(from: retrievedDate as! Date)
+            */
+            
             celula.nomeTreinoLabel.text = dadosTreino["nome"] as? String
             celula.descricaoTreinoLabel.text = dadosTreino["descricao"] as? String
-            celula.dataTreinoLabel.text = dadosTreino["data"] as? String
+            //celula.dataTreinoLabel?.text = newDate
             
             return celula
             
@@ -130,5 +146,28 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         auth.removeStateDidChangeListener(handler)
     }
+    
+    // Método para remover Treino
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            let dadosTreino = self.listaTreinos[indexPath.row-1]
+    
+            // Removendo do Firebase
+            self.db
+              .collection("usuarios")
+            .document(idUsuarioLogado)
+            .collection("treinos")
+                .document(dadosTreino["id"] as! String)
+              .delete()
+            
+            // Removendo do Array
+            self.listaTreinos.remove(at: indexPath.row-1)
+            // Removendo da Table View
+            self.treinosTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+            
+    }
+        
 
 }

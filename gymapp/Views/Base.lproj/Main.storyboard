@@ -247,6 +247,122 @@
             </objects>
             <point key="canvasLocation" x="1810.144927536232" y="112.5"/>
         </scene>
+        <!--Editar Treino View Controller-->
+        <scene sceneID="WNI-TV-VNf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tdB-Qd-DhP" customClass="EditarTreinoViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PL1-I2-l1N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Exemplo: Treino para Bíceps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3R-BL-yTF">
+                                <rect key="frame" x="20" y="175.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBY-iC-i2F">
+                                <rect key="frame" x="20" y="143" width="374" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição (Opcional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0J-AR-n5d">
+                                <rect key="frame" x="20" y="234.5" width="374" height="23"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CQC-Al-g9u">
+                                <rect key="frame" x="20" y="267.5" width="374" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sjc-Ma-3Ow"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boy-s3-zPV">
+                                <rect key="frame" x="274" y="397.5" width="120" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="1Vw-Xu-Enm"/>
+                                    <constraint firstAttribute="height" constant="40" id="kWj-U0-vlz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="salvarButton:" destination="tdB-Qd-DhP" eventType="touchUpInside" id="BGZ-dF-sXC"/>
+                                    <action selector="salvarTreinoButton:" destination="ldR-6N-w8B" eventType="touchUpInside" id="ly4-qy-Esa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar Treino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs4-ei-aPz">
+                                <rect key="frame" x="20" y="84" width="374" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr8-KX-wwQ">
+                                <rect key="frame" x="144" y="397.5" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xcj-jn-Z7S"/>
+                                    <constraint firstAttribute="width" constant="120" id="xkn-SV-kG7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelarButton:" destination="ldR-6N-w8B" eventType="touchUpInside" id="9ze-EZ-aIz"/>
+                                    <action selector="cancelarButton:" destination="tdB-Qd-DhP" eventType="touchUpInside" id="vaI-ks-KK5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y0J-AR-n5d" firstAttribute="leading" secondItem="zCQ-Yo-bMI" secondAttribute="leading" constant="20" id="1pN-Fg-1CB"/>
+                            <constraint firstItem="CQC-Al-g9u" firstAttribute="top" secondItem="Y0J-AR-n5d" secondAttribute="bottom" constant="10" id="34v-3h-d51"/>
+                            <constraint firstItem="Y0J-AR-n5d" firstAttribute="top" secondItem="n3R-BL-yTF" secondAttribute="bottom" constant="25" id="CPn-mX-cez"/>
+                            <constraint firstItem="zCQ-Yo-bMI" firstAttribute="trailing" secondItem="n3R-BL-yTF" secondAttribute="trailing" constant="20" id="Fy2-uT-bwm"/>
+                            <constraint firstItem="zCQ-Yo-bMI" firstAttribute="trailing" secondItem="boy-s3-zPV" secondAttribute="trailing" constant="20" id="LSE-9m-qGI"/>
+                            <constraint firstItem="zr8-KX-wwQ" firstAttribute="top" secondItem="CQC-Al-g9u" secondAttribute="bottom" constant="30" id="LTe-oq-cVI"/>
+                            <constraint firstItem="zCQ-Yo-bMI" firstAttribute="trailing" secondItem="CQC-Al-g9u" secondAttribute="trailing" constant="20" id="MlX-lv-kKU"/>
+                            <constraint firstItem="vs4-ei-aPz" firstAttribute="top" secondItem="zCQ-Yo-bMI" secondAttribute="top" constant="40" id="P4d-du-bkQ"/>
+                            <constraint firstItem="n3R-BL-yTF" firstAttribute="top" secondItem="FBY-iC-i2F" secondAttribute="bottom" constant="10" id="WAW-PU-5ZV"/>
+                            <constraint firstItem="n3R-BL-yTF" firstAttribute="leading" secondItem="zCQ-Yo-bMI" secondAttribute="leading" constant="20" id="eVM-gs-miH"/>
+                            <constraint firstItem="boy-s3-zPV" firstAttribute="top" secondItem="CQC-Al-g9u" secondAttribute="bottom" constant="30" id="fqK-UX-lGC"/>
+                            <constraint firstItem="zCQ-Yo-bMI" firstAttribute="trailing" secondItem="FBY-iC-i2F" secondAttribute="trailing" constant="20" id="iDO-kl-ryh"/>
+                            <constraint firstItem="FBY-iC-i2F" firstAttribute="leading" secondItem="zCQ-Yo-bMI" secondAttribute="leading" constant="20" id="iEX-n1-2AG"/>
+                            <constraint firstItem="vs4-ei-aPz" firstAttribute="leading" secondItem="zCQ-Yo-bMI" secondAttribute="leading" constant="20" id="k9A-eF-h8Y"/>
+                            <constraint firstItem="zCQ-Yo-bMI" firstAttribute="trailing" secondItem="vs4-ei-aPz" secondAttribute="trailing" constant="20" id="oHI-PR-AaL"/>
+                            <constraint firstItem="CQC-Al-g9u" firstAttribute="leading" secondItem="zCQ-Yo-bMI" secondAttribute="leading" constant="20" id="szO-EH-eSj"/>
+                            <constraint firstItem="boy-s3-zPV" firstAttribute="leading" secondItem="zr8-KX-wwQ" secondAttribute="trailing" constant="10" id="xNB-r9-V7Q"/>
+                            <constraint firstItem="FBY-iC-i2F" firstAttribute="top" secondItem="vs4-ei-aPz" secondAttribute="bottom" constant="30" id="yoO-nU-Ssg"/>
+                            <constraint firstItem="zCQ-Yo-bMI" firstAttribute="trailing" secondItem="Y0J-AR-n5d" secondAttribute="trailing" constant="20" id="zy7-UR-SCr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zCQ-Yo-bMI"/>
+                    </view>
+                    <connections>
+                        <outlet property="descricaoTreinoLabel" destination="CQC-Al-g9u" id="sMC-7l-sYa"/>
+                        <outlet property="nomeTreinoLabel" destination="n3R-BL-yTF" id="w6b-3N-XXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-Pb-XuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="2457"/>
+        </scene>
         <!--Treinos-->
         <scene sceneID="tzg-Ju-cDa">
             <objects>
@@ -425,6 +541,7 @@
                         <outlet property="treinosTableView" destination="pnM-iE-d5v" id="OXz-lR-FOU"/>
                         <segue destination="pWw-XA-MzW" kind="show" identifier="toLoginSegue" id="azh-Bb-zNJ"/>
                         <segue destination="M1l-7A-jf0" kind="show" identifier="exerciciosSegue" id="IG1-d1-1aN"/>
+                        <segue destination="tdB-Qd-DhP" kind="presentation" identifier="editarTreinoSegue" id="X6h-7r-Pgz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMb-jA-Uzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -567,7 +684,7 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-Mq-V2H">
                                                     <rect key="frame" x="20" y="26" width="374" height="287"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exercicio" translatesAutoresizingMaskIntoConstraints="NO" id="4gJ-10-uzi">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exercicio" translatesAutoresizingMaskIntoConstraints="NO" id="4gJ-10-uzi">
                                                             <rect key="frame" x="12" y="12" width="350" height="145"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="145" id="VSL-0B-XCo"/>
@@ -586,7 +703,7 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cadeira Tríceps. Sente-se sobre uma cadeira e, com as mãos para trás, faça agachamentos." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3m-oc-aAp">
                                                             <rect key="frame" x="12" y="201" width="350" height="61"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                                             <color key="textColor" red="0.34625522219999999" green="0.1129356858" blue="0.1454677637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -663,6 +780,7 @@
                         <outlet property="nomeTreinoLabel" destination="Drx-Lr-1XP" id="dde-zc-jrd"/>
                         <outlet property="tableViewExercicios" destination="mlB-wN-nT1" id="Zjs-mx-q1G"/>
                         <segue destination="Lj0-7O-9XS" kind="presentation" identifier="addExercicioSegue" id="Cgl-p3-5Aq"/>
+                        <segue destination="NBU-5I-6Xx" kind="show" identifier="detalhesExercicioSegue" id="ASQ-ub-8Ef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTY-UJ-6jD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -689,13 +807,13 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observações:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9A-Cr-GBY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observações (Opcional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9A-Cr-GBY">
                                 <rect key="frame" x="20" y="435.5" width="374" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagem:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-IR-t0n">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagem (Opcional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-IR-t0n">
                                 <rect key="frame" x="20" y="214.5" width="374" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -742,7 +860,7 @@
                                     <action selector="salvarExercicioButton:" destination="Lj0-7O-9XS" eventType="touchUpInside" id="KKc-O1-9e0"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="escolha-treino" translatesAutoresizingMaskIntoConstraints="NO" id="xMd-ct-rwQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="escolha-treino" translatesAutoresizingMaskIntoConstraints="NO" id="xMd-ct-rwQ">
                                 <rect key="frame" x="25" y="252.5" width="364" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="QhR-qv-7d2"/>
@@ -755,9 +873,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGl-vL-Wl1">
                                 <rect key="frame" x="40" y="387.5" width="334" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                 <state key="normal" title="Selecionar Imagem">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pegarImagemExercicioButton:" destination="Lj0-7O-9XS" eventType="touchUpInside" id="VQv-Ki-9ki"/>
@@ -816,6 +934,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="67b-SZ-I4h"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZGr-gf-eHG"/>
                     <connections>
                         <outlet property="imagemExercicio" destination="xMd-ct-rwQ" id="0iV-o7-5sL"/>
                         <outlet property="nomeExercicioLabel" destination="VnR-IV-J3w" id="RyS-9N-dNz"/>
@@ -824,7 +943,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfE-e9-8db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2347.826086956522" y="3193.5267857142858"/>
+            <point key="canvasLocation" x="2917" y="3575"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="nH5-LD-kgT">
@@ -834,7 +953,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard-user-picture" translatesAutoresizingMaskIntoConstraints="NO" id="w32-Na-kUI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard-user-picture" translatesAutoresizingMaskIntoConstraints="NO" id="w32-Na-kUI">
                                 <rect key="frame" x="20" y="128" width="115" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="UQf-hw-BUe"/>
@@ -904,6 +1023,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kge-sP-Xk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2069.5652173913045" y="2456.9196428571427"/>
+        </scene>
+        <!--Detalhes Exercicio View Controller-->
+        <scene sceneID="EIA-x5-7Wd">
+            <objects>
+                <viewController id="NBU-5I-6Xx" customClass="DetalhesExercicioViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XdC-Wj-KAR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UMl-tM-ji0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="WwL-3i-6wR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-D7-Poc">
+                                <rect key="frame" x="20" y="284" width="374" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su0-EI-5Ur">
+                                <rect key="frame" x="20" y="205" width="374" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="su0-EI-5Ur" firstAttribute="leading" secondItem="3ww-iS-Jg2" secondAttribute="leading" constant="20" id="A0H-8R-jnM"/>
+                            <constraint firstItem="su0-EI-5Ur" firstAttribute="top" secondItem="UMl-tM-ji0" secondAttribute="bottom" constant="25" id="Efj-iC-sxy"/>
+                            <constraint firstItem="UMl-tM-ji0" firstAttribute="top" secondItem="XdC-Wj-KAR" secondAttribute="top" id="FEr-Lc-biL"/>
+                            <constraint firstItem="m4R-D7-Poc" firstAttribute="top" secondItem="su0-EI-5Ur" secondAttribute="bottom" constant="50" id="FiQ-gG-UNa"/>
+                            <constraint firstItem="3ww-iS-Jg2" firstAttribute="trailing" secondItem="su0-EI-5Ur" secondAttribute="trailing" constant="20" id="Nhw-Xu-ekN"/>
+                            <constraint firstItem="UMl-tM-ji0" firstAttribute="leading" secondItem="3ww-iS-Jg2" secondAttribute="leading" id="Qeb-qJ-ZYK"/>
+                            <constraint firstItem="3ww-iS-Jg2" firstAttribute="trailing" secondItem="m4R-D7-Poc" secondAttribute="trailing" constant="20" id="fRp-Aw-pOx"/>
+                            <constraint firstItem="m4R-D7-Poc" firstAttribute="leading" secondItem="3ww-iS-Jg2" secondAttribute="leading" constant="20" id="hSL-Gb-g2q"/>
+                            <constraint firstItem="UMl-tM-ji0" firstAttribute="trailing" secondItem="3ww-iS-Jg2" secondAttribute="trailing" id="l4T-Yi-ljJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3ww-iS-Jg2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FwJ-Zf-b0k">
+                        <barButtonItem key="rightBarButtonItem" title="Editar" id="qJt-wh-klY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imagemDetalhesExercicio" destination="UMl-tM-ji0" id="TlN-Eh-vd9"/>
+                        <outlet property="nomeDetalhesExercicio" destination="su0-EI-5Ur" id="jD1-Km-XfA"/>
+                        <outlet property="observacaoDetalhesExercicio" destination="m4R-D7-Poc" id="C0X-8I-5En"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4s9-eq-a7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2915.9420289855075" y="2903.5714285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lBn-cq-L9j">
@@ -997,7 +1170,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="azh-Bb-zNJ"/>
-        <segue reference="NKE-HW-2En"/>
+        <segue reference="pVb-oL-t4s"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="escolha-treino" width="335" height="130"/>

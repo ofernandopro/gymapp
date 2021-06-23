@@ -80,12 +80,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         performSegue(withIdentifier: "addExercicioSegue", sender: self.treino)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addExercicioSegue" {
-            let viewDestino = segue.destination as! CriarExercicioViewController
-            viewDestino.treinoExercicios = treino
-        }
-    }
+    
     
     
     
@@ -127,6 +122,30 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return celula
         
+    }
+    
+    // Usado para abrir a tela de Detalhes Exercicio ao clicar em um exercício:
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if self.listaExercicios.count > 0 {
+            self.tableViewExercicios.deselectRow(at: indexPath, animated: true)
+            let index = indexPath.row
+            let exercicio = self.listaExercicios[index]
+            
+            self.performSegue(withIdentifier: "detalhesExercicioSegue", sender: exercicio)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addExercicioSegue" {
+            let viewDestino = segue.destination as! CriarExercicioViewController
+            viewDestino.treinoExercicios = treino
+        }
+        else if segue.identifier == "detalhesExercicioSegue" {
+            let viewDestino = segue.destination as! DetalhesExercicioViewController
+            viewDestino.exercicioDetalhes = sender as? Dictionary
+        }
     }
     
 
