@@ -78,25 +78,14 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let totalTreinos = self.listaTreinos.count
-        return totalTreinos + 1
+        return totalTreinos
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.row == 0 {
-        
-            let celula = tableView.dequeueReusableCell(withIdentifier: "treinoPadraoCelula", for: indexPath) as! TreinoPadraoTableViewCell
-            
-            celula.nomeTreinoPadrao.text = "Treino Padrão"
-            celula.descricaoTreinoPadrao.text = "Treino padrão para braços e pernas."
-            
-            return celula
-            
-        } else {
             
             let celula = tableView.dequeueReusableCell(withIdentifier: "treinoCelula", for: indexPath) as! TreinoTableViewCell
             
-            let dadosTreino = self.listaTreinos[indexPath.row-1]
+            let dadosTreino = self.listaTreinos[indexPath.row]
             
             // Converte data de timestamp para string
             let dataTimestamp = dadosTreino["data"] as! Timestamp
@@ -107,16 +96,14 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
             celula.dataTreino.text = data.asString()
             
             return celula
-            
-        }
-        
+                    
     }
     
     // Usado para abrir a tela de exercícios ao clicar em um treino:
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.treinosTableView.deselectRow(at: indexPath, animated: true)
-        let index = indexPath.row-1
+        let index = indexPath.row
         let treino = self.listaTreinos[index]
         
         self.performSegue(withIdentifier: "exerciciosSegue", sender: treino)
@@ -138,7 +125,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            let dadosTreino = self.listaTreinos[indexPath.row-1]
+            let dadosTreino = self.listaTreinos[indexPath.row]
     
             // Removendo do Firebase
             self.db
@@ -158,7 +145,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
                 .document()
             */
             // Removendo do Array
-            self.listaTreinos.remove(at: indexPath.row-1)
+            self.listaTreinos.remove(at: indexPath.row)
             // Removendo da Table View
             self.treinosTableView.deleteRows(at: [indexPath], with: .automatic)
         }

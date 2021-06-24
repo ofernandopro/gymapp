@@ -63,17 +63,23 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
         if let nomeExercicio = nomeExercicioLabel.text {
             if let observacaoExercicio = observacoesExercicioLabel.text {
                 
-                let dadosExercicio: Dictionary<String, Any> = [
-                    "id": uuid,
-                    "idUsuario": idUsuarioLogado!,
-                    "nome": nomeExercicio,
-                    "urlImagem": self.urlImagem,
-                    "observacao": observacaoExercicio
-                ]
+                if nomeExercicio == "" {
+                    exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o exercício!")
+                } else {
                 
-                salvarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
-                
-                self.salvarExercicioFirebase(dadosExercicio: dadosExercicio)
+                    let dadosExercicio: Dictionary<String, Any> = [
+                        "id": uuid,
+                        "idUsuario": idUsuarioLogado!,
+                        "nome": nomeExercicio,
+                        "urlImagem": self.urlImagem,
+                        "observacao": observacaoExercicio
+                    ]
+                    
+                    salvarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
+                    
+                    self.salvarExercicioFirebase(dadosExercicio: dadosExercicio)
+                    
+                }
                 
             }
         }

@@ -40,16 +40,21 @@ class CriarTreinoViewController: UIViewController {
         if let nomeTreino = nomeTreinoLabel.text {
             if let descricaoTreino = descricaoTreinoLabel.text {
                 
-                let dadosTreino: Dictionary<String, Any> = [
-                    "id": uuid,
-                    "idUsuario": idUsuarioLogado!,
-                    "nome": nomeTreino,
-                    "descricao": descricaoTreino,
-                    "data": FieldValue.serverTimestamp()
-                ]
+                if nomeTreino == "" {
+                    exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o treino!")
+                } else {
                 
-                self.salvarTreinoFirebase(dadosTreino: dadosTreino)
+                    let dadosTreino: Dictionary<String, Any> = [
+                        "id": uuid,
+                        "idUsuario": idUsuarioLogado!,
+                        "nome": nomeTreino,
+                        "descricao": descricaoTreino,
+                        "data": FieldValue.serverTimestamp()
+                    ]
+                    
+                    self.salvarTreinoFirebase(dadosTreino: dadosTreino)
                 
+                }
             }
         }
         

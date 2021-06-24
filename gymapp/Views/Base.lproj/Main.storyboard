@@ -375,74 +375,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treinoPadraoCelula" rowHeight="149" id="FPH-TT-v2l" customClass="TreinoPadraoTableViewCell" customModule="gymapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="149"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPH-TT-v2l" id="I1m-8B-W1J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-CW-Mqh">
-                                                    <rect key="frame" x="20" y="21" width="374" height="107"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Treino Padrão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHp-dK-zMe">
-                                                            <rect key="frame" x="13" y="8" width="129" height="23"/>
-                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                                            <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8E0-IL-nVD">
-                                                            <rect key="frame" x="348" y="77" width="18" height="22"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="22" id="AHv-p5-zzA"/>
-                                                                <constraint firstAttribute="width" constant="18" id="D2S-dU-0dD"/>
-                                                            </constraints>
-                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" image="pencil" catalog="system"/>
-                                                            <connections>
-                                                                <action selector="editarTreinoButton:" destination="FPH-TT-v2l" eventType="touchUpInside" id="7As-WJ-29a"/>
-                                                            </connections>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Treino para bíceps, tríceps, peito, perna, ombro e costas." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr2-wE-gJg">
-                                                            <rect key="frame" x="15" y="44" width="319" height="42"/>
-                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="8E0-IL-nVD" secondAttribute="bottom" constant="8" id="1c4-MG-I4s"/>
-                                                        <constraint firstAttribute="trailing" secondItem="8E0-IL-nVD" secondAttribute="trailing" constant="8" id="7YK-db-O4n"/>
-                                                        <constraint firstItem="CHp-dK-zMe" firstAttribute="top" secondItem="Vys-CW-Mqh" secondAttribute="top" constant="10" id="DrJ-Jn-eQA"/>
-                                                        <constraint firstAttribute="trailing" secondItem="wr2-wE-gJg" secondAttribute="trailing" constant="40" id="Kh2-Fa-5nH"/>
-                                                        <constraint firstItem="wr2-wE-gJg" firstAttribute="leading" secondItem="Vys-CW-Mqh" secondAttribute="leading" constant="15" id="Rgg-x3-v1L"/>
-                                                        <constraint firstItem="wr2-wE-gJg" firstAttribute="top" secondItem="CHp-dK-zMe" secondAttribute="bottom" constant="13" id="gKr-fy-T2Q"/>
-                                                        <constraint firstAttribute="bottom" secondItem="wr2-wE-gJg" secondAttribute="bottom" constant="12" id="vtu-Vc-bMX"/>
-                                                        <constraint firstItem="CHp-dK-zMe" firstAttribute="leading" secondItem="Vys-CW-Mqh" secondAttribute="leading" constant="13" id="y98-vp-DdM"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="20"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Vys-CW-Mqh" firstAttribute="trailing" secondItem="I1m-8B-W1J" secondAttribute="trailingMargin" id="LQA-TA-PFS"/>
-                                                <constraint firstItem="Vys-CW-Mqh" firstAttribute="top" secondItem="I1m-8B-W1J" secondAttribute="topMargin" constant="10" id="V5j-Q0-QAL"/>
-                                                <constraint firstItem="Vys-CW-Mqh" firstAttribute="leading" secondItem="I1m-8B-W1J" secondAttribute="leadingMargin" id="pZl-Ew-RKx"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Vys-CW-Mqh" secondAttribute="bottom" constant="10" id="sWi-CO-bte"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="descricaoTreinoPadrao" destination="wr2-wE-gJg" id="HNS-XS-uaI"/>
-                                            <outlet property="nomeTreinoPadrao" destination="CHp-dK-zMe" id="x7n-Fa-sna"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treinoCelula" rowHeight="149" id="8eS-Aw-5jO" customClass="TreinoTableViewCell" customModule="gymapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="177" width="414" height="149"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8eS-Aw-5jO" id="3dJ-AH-7Ee">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>

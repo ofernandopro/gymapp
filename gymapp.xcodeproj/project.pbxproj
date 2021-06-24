@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		70E49B484C9FE47E97810576 /* Pods_gymapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557D49080A2714A8A7AF052C /* Pods_gymapp.framework */; };
-		C44FF91626820BE600A6D572 /* TreinoPadraoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FF91526820BE600A6D572 /* TreinoPadraoTableViewCell.swift */; };
 		C44FF9182682327D00A6D572 /* ExerciciosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FF9172682327D00A6D572 /* ExerciciosViewController.swift */; };
 		C44FF91A268254AB00A6D572 /* CriarExercicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FF919268254AB00A6D572 /* CriarExercicioViewController.swift */; };
 		C4B20897268128F200032FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B20896268128F200032FC8 /* AppDelegate.swift */; };
@@ -32,7 +31,6 @@
 		0D0780F59727F2914F2A754B /* Pods-gymapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gymapp.release.xcconfig"; path = "Target Support Files/Pods-gymapp/Pods-gymapp.release.xcconfig"; sourceTree = "<group>"; };
 		557D49080A2714A8A7AF052C /* Pods_gymapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gymapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6B1E40A2DC97D70BB6BB19 /* Pods-gymapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gymapp.debug.xcconfig"; path = "Target Support Files/Pods-gymapp/Pods-gymapp.debug.xcconfig"; sourceTree = "<group>"; };
-		C44FF91526820BE600A6D572 /* TreinoPadraoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreinoPadraoTableViewCell.swift; sourceTree = "<group>"; };
 		C44FF9172682327D00A6D572 /* ExerciciosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosViewController.swift; sourceTree = "<group>"; };
 		C44FF919268254AB00A6D572 /* CriarExercicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarExercicioViewController.swift; sourceTree = "<group>"; };
 		C4B20893268128F200032FC8 /* gymapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gymapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				C4D60B8426817AAB00255E46 /* TreinoTableViewCell.swift */,
-				C44FF91526820BE600A6D572 /* TreinoPadraoTableViewCell.swift */,
 				C4D1E0B52682B6C0004A47B1 /* ExercicioTableViewCell.swift */,
 			);
 			path = Cells;
@@ -312,7 +309,6 @@
 				C44FF91A268254AB00A6D572 /* CriarExercicioViewController.swift in Sources */,
 				C4B20897268128F200032FC8 /* AppDelegate.swift in Sources */,
 				C4D60B88268187F800255E46 /* CriarTreinoViewController.swift in Sources */,
-				C44FF91626820BE600A6D572 /* TreinoPadraoTableViewCell.swift in Sources */,
 				C4D60B7D268130DA00255E46 /* CriarContaViewController.swift in Sources */,
 				C4B20899268128F200032FC8 /* SceneDelegate.swift in Sources */,
 				C4D60B8526817AAB00255E46 /* TreinoTableViewCell.swift in Sources */,
