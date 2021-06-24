@@ -46,7 +46,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.db.collection("usuarios")
             .document(idUsuarioLogado)
         .collection("treinos")
-            .order(by: "data", descending: true)
+            .order(by: "data", descending: false)
             .getDocuments { (snapshotResult, error) in
                 
                 if let snapshot = snapshotResult {
@@ -82,20 +82,20 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let celula = tableView.dequeueReusableCell(withIdentifier: "treinoCelula", for: indexPath) as! TreinoTableViewCell
-            
-            let dadosTreino = self.listaTreinos[indexPath.row]
-            
-            // Converte data de timestamp para string
-            let dataTimestamp = dadosTreino["data"] as! Timestamp
-            let data = dataTimestamp.dateValue()
-            
-            celula.nomeTreinoLabel.text = dadosTreino["nome"] as? String
-            celula.descricaoTreinoLabel.text = dadosTreino["descricao"] as? String
-            celula.dataTreino.text = data.asString()
-            
-            return celula
+                
+        let celula = tableView.dequeueReusableCell(withIdentifier: "treinoCelula", for: indexPath) as! TreinoTableViewCell
+        
+        let dadosTreino = self.listaTreinos[indexPath.row]
+
+        // Converte data de timestamp para string
+        let dataTimestamp = dadosTreino["data"] as! Timestamp
+        let data = dataTimestamp.dateValue()
+        
+        celula.nomeTreinoLabel.text = dadosTreino["nome"] as? String
+        celula.descricaoTreinoLabel.text = dadosTreino["descricao"] as? String
+        celula.dataTreino.text = data.asString()
+        
+        return celula
                     
     }
     
@@ -148,6 +148,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.listaTreinos.remove(at: indexPath.row)
             // Removendo da Table View
             self.treinosTableView.deleteRows(at: [indexPath], with: .automatic)
+            
         }
             
     }

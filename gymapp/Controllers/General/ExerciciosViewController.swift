@@ -27,7 +27,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         //self.title = treino["nome"] as? String
-        nomeTreinoLabel.text = "Exercícios:"
+        nomeTreinoLabel.text = "Exercícios"
         /*
         nomeTreinoLabel.text = treino["nome"] as? String
         descricaoTreinoLabel.text = treino["descricao"] as? String
@@ -48,7 +48,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     override func viewDidAppear(_ animated: Bool) {
-        self.title = treino["nome"] as? String
+        //self.title = treino["nome"] as? String
         recuperarExercicios()
     }
     
@@ -60,6 +60,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         .collection("treinos")
         .document(treino["id"] as! String)
         .collection("exercicios")
+            .order(by: "data", descending: true)
             .getDocuments { (snapshotResult, error) in
                 
                 if let snapshot = snapshotResult {

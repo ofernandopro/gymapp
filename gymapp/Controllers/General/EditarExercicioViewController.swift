@@ -97,7 +97,7 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
                 let nomeImagem = "\(uuid).jpg"
                 
                 
-                let fotoPerfilRef = imagens.child("perfil").child(nomeImagem)
+                let fotoPerfilRef = imagens.child("exercicio").child(nomeImagem)
                     fotoPerfilRef.putData(imagemUpload, metadata: nil) { (metaData, error) in
                         
                         if error == nil {

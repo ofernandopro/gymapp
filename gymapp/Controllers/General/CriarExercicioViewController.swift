@@ -71,7 +71,8 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
                         "idUsuario": idUsuarioLogado!,
                         "nome": nomeExercicio,
                         "urlImagem": self.urlImagem,
-                        "observacao": observacaoExercicio
+                        "observacao": observacaoExercicio,
+                        "data": FieldValue.serverTimestamp()
                     ]
                     
                     salvarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
@@ -118,7 +119,7 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
                 let nomeImagem = "\(uuid).jpg"
                 
                 
-                let fotoPerfilRef = imagens.child("perfil").child(nomeImagem)
+                let fotoPerfilRef = imagens.child("exercicio").child(nomeImagem)
                     fotoPerfilRef.putData(imagemUpload, metadata: nil) { (metaData, error) in
                         
                         if error == nil {

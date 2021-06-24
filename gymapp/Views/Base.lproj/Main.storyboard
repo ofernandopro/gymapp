@@ -624,14 +624,14 @@
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cadeira Tríceps" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQM-GP-JqO">
                                                             <rect key="frame" x="12" y="167" width="350" height="26"/>
-                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="21"/>
+                                                            <color key="textColor" red="0.34625522219999999" green="0.1129356858" blue="0.1454677637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cadeira Tríceps. Sente-se sobre uma cadeira e, com as mãos para trás, faça agachamentos." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3m-oc-aAp">
                                                             <rect key="frame" x="12" y="201" width="350" height="61"/>
-                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
-                                                            <color key="textColor" red="0.34625522219999999" green="0.1129356858" blue="0.1454677637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -684,7 +684,7 @@
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9j-Zb-Gne">
                                 <rect key="frame" x="344" y="20" width="50" height="50"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.018721711901257265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FFj-qR-b4M"/>
                                     <constraint firstAttribute="width" constant="50" id="cFO-VA-su2"/>
@@ -809,7 +809,7 @@
                                     <action selector="salvarExercicioButton:" destination="Lj0-7O-9XS" eventType="touchUpInside" id="KKc-O1-9e0"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="escolha-treino" translatesAutoresizingMaskIntoConstraints="NO" id="xMd-ct-rwQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagem-padrao-exercicio" translatesAutoresizingMaskIntoConstraints="NO" id="xMd-ct-rwQ">
                                 <rect key="frame" x="25" y="252.5" width="364" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="QhR-qv-7d2"/>
@@ -1283,7 +1283,6 @@
         <segue reference="NKE-HW-2En"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="escolha-treino" width="335" height="130"/>
         <image name="exercicio" width="800" height="445"/>
         <image name="gym-icon" width="37.5" height="37.5"/>
         <image name="imagem-padrao-exercicio" width="335" height="130"/>

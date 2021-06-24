@@ -105,7 +105,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
                 let idUsuario = usuarioLogado.uid
                 let nomeImagem = "\(idUsuario).jpg"
                 
-                let fotoPerfilRef = imagens.child("perfil").child(nomeImagem)
+                let fotoPerfilRef = imagens.child("exercicio").child(nomeImagem)
                     fotoPerfilRef.putData(imagemUpload, metadata: nil) { (metaData, error) in
                         
                         if error == nil {
