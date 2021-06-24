@@ -76,14 +76,14 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
-    @IBAction func addExercicioButton(_ sender: Any) {
-        performSegue(withIdentifier: "addExercicioSegue", sender: self.treino)
+    @IBAction func editarExercicioSegue(_ sender: Any) {
+        performSegue(withIdentifier: "editarTreinoSegue", sender: treino)
     }
     
     
-    
-    
-    
+    @IBAction func addExercicioButton(_ sender: Any) {
+        performSegue(withIdentifier: "addExercicioSegue", sender: self.treino)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -91,10 +91,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let totalExercicios = self.listaExercicios.count
-        
-        if totalExercicios == 0 {
-            return 1
-        }
+
         return totalExercicios
     }
     
@@ -146,6 +143,10 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
             let viewDestino = segue.destination as! DetalhesExercicioViewController
             viewDestino.exercicioDetalhes = sender as? Dictionary
         }
+        else if segue.identifier == "editarTreinoSegue" {
+            let viewDestino = segue.destination as! EditarTreinoViewController
+            viewDestino.treinoEditar = sender as? Dictionary
+        }
     }
     
     // Método para remover Exercício
@@ -153,21 +154,22 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if editingStyle == UITableViewCell.EditingStyle.delete {
             let dadosExercicio = self.listaExercicios[indexPath.row]
-    
-            // Removendo do Firebase
-            self.db
-              .collection("usuarios")
-            .document(idUsuarioLogado)
-            .collection("treinos")
-                .document(treino["id"] as! String)
-            .collection("exercicios")
-            .document(dadosExercicio["id"] as! String)
-              .delete()
             
-            // Removendo do Array
-            self.listaExercicios.remove(at: indexPath.row)
-            // Removendo da Table View
-            self.tableViewExercicios.deleteRows(at: [indexPath], with: .automatic)
+                // Removendo do Firebase
+                self.db
+                  .collection("usuarios")
+                .document(idUsuarioLogado)
+                .collection("treinos")
+                    .document(treino["id"] as! String)
+                .collection("exercicios")
+                .document(dadosExercicio["id"] as! String)
+                  .delete()
+                
+                // Removendo do Array
+                self.listaExercicios.remove(at: indexPath.row)
+                // Removendo da Table View
+                self.tableViewExercicios.deleteRows(at: [indexPath], with: .automatic)
+            
         }
             
     }

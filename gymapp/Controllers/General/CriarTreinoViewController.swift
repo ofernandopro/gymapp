@@ -88,6 +88,7 @@ class CriarTreinoViewController: UIViewController {
         self.present(alerta, animated: true, completion: nil)
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNeedsStatusBarAppearanceUpdate()

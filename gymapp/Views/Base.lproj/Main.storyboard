@@ -304,7 +304,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="salvarButton:" destination="tdB-Qd-DhP" eventType="touchUpInside" id="BGZ-dF-sXC"/>
+                                    <action selector="salvarButton:" destination="tdB-Qd-DhP" eventType="touchUpInside" id="YWh-ET-TFL"/>
                                     <action selector="salvarTreinoButton:" destination="ldR-6N-w8B" eventType="touchUpInside" id="ly4-qy-Esa"/>
                                 </connections>
                             </button>
@@ -325,8 +325,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelarButton:" destination="ldR-6N-w8B" eventType="touchUpInside" id="9ze-EZ-aIz"/>
-                                    <action selector="cancelarButton:" destination="tdB-Qd-DhP" eventType="touchUpInside" id="vaI-ks-KK5"/>
+                                    <action selector="cancelarButton:" destination="tdB-Qd-DhP" eventType="touchUpInside" id="cAS-Md-gOZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -355,13 +354,13 @@
                         <viewLayoutGuide key="safeArea" id="zCQ-Yo-bMI"/>
                     </view>
                     <connections>
-                        <outlet property="descricaoTreinoLabel" destination="CQC-Al-g9u" id="sMC-7l-sYa"/>
-                        <outlet property="nomeTreinoLabel" destination="n3R-BL-yTF" id="w6b-3N-XXM"/>
+                        <outlet property="descricaoTreinoEditado" destination="CQC-Al-g9u" id="qRj-YC-zZV"/>
+                        <outlet property="nomeTreinoEditado" destination="n3R-BL-yTF" id="SK5-lT-aAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-Pb-XuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="2457"/>
+            <point key="canvasLocation" x="2916" y="3793"/>
         </scene>
         <!--Treinos-->
         <scene sceneID="tzg-Ju-cDa">
@@ -397,17 +396,8 @@
                                                             <color key="textColor" red="0.34625522219999999" green="0.1129356858" blue="0.1454677637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-Y0-QS8">
-                                                            <rect key="frame" x="348" y="77" width="18" height="22"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="22" id="QZw-15-ffL"/>
-                                                                <constraint firstAttribute="width" constant="18" id="mXy-Vb-9l9"/>
-                                                            </constraints>
-                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" image="pencil" catalog="system"/>
-                                                        </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Treino para biceps e triceps com adaptaçao para braço" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flh-cV-r1b">
-                                                            <rect key="frame" x="15" y="44" width="319" height="42"/>
+                                                            <rect key="frame" x="15" y="44" width="339" height="42"/>
                                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -415,16 +405,14 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="Pa2-Y0-QS8" secondAttribute="bottom" constant="8" id="0w6-Xk-4fZ"/>
                                                         <constraint firstItem="pUf-yE-0Lr" firstAttribute="top" secondItem="lpt-xG-s0w" secondAttribute="top" constant="10" id="5zG-9x-ZAa"/>
                                                         <constraint firstItem="flh-cV-r1b" firstAttribute="top" secondItem="pUf-yE-0Lr" secondAttribute="bottom" constant="13" id="986-sP-qVo"/>
                                                         <constraint firstItem="pUf-yE-0Lr" firstAttribute="leading" secondItem="lpt-xG-s0w" secondAttribute="leading" constant="13" id="M8V-um-jQ5"/>
                                                         <constraint firstItem="flh-cV-r1b" firstAttribute="leading" secondItem="lpt-xG-s0w" secondAttribute="leading" constant="15" id="SkN-xo-LK9"/>
                                                         <constraint firstAttribute="trailing" secondItem="u7D-U7-3yP" secondAttribute="trailing" constant="12" id="ctw-zv-AXd"/>
-                                                        <constraint firstAttribute="trailing" secondItem="flh-cV-r1b" secondAttribute="trailing" constant="40" id="hkT-MI-LTF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="flh-cV-r1b" secondAttribute="trailing" constant="20" id="hkT-MI-LTF"/>
                                                         <constraint firstAttribute="bottom" secondItem="flh-cV-r1b" secondAttribute="bottom" constant="12" id="ixi-LY-D3K"/>
                                                         <constraint firstItem="u7D-U7-3yP" firstAttribute="top" secondItem="lpt-xG-s0w" secondAttribute="top" constant="8" id="oAf-SA-Ry3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Pa2-Y0-QS8" secondAttribute="trailing" constant="8" id="rwY-GK-bBb"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -474,7 +462,6 @@
                     <connections>
                         <outlet property="treinosTableView" destination="pnM-iE-d5v" id="OXz-lR-FOU"/>
                         <segue destination="M1l-7A-jf0" kind="show" identifier="exerciciosSegue" id="IG1-d1-1aN"/>
-                        <segue destination="tdB-Qd-DhP" kind="presentation" identifier="editarTreinoSegue" id="X6h-7r-Pgz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMb-jA-Uzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -593,9 +580,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5SQ-W5-3D0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336.23188405797106" y="3193.5267857142858"/>
+            <point key="canvasLocation" x="281" y="3301"/>
         </scene>
-        <!--Exercícios-->
+        <!--Exercicios View Controller-->
         <scene sceneID="sfP-1B-AJf">
             <objects>
                 <viewController id="M1l-7A-jf0" customClass="ExerciciosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -604,7 +591,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlB-wN-nT1">
-                                <rect key="frame" x="0.0" y="86.5" width="414" height="638.5"/>
+                                <rect key="frame" x="0.0" y="87" width="414" height="638"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exercicioCelula" rowHeight="324" id="2Xv-AH-zp4" customClass="ExercicioTableViewCell" customModule="gymapp" customModuleProvider="target">
@@ -683,29 +670,50 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-Lr-1XP">
-                                <rect key="frame" x="20" y="35" width="374" height="31.5"/>
+                                <rect key="frame" x="20" y="35" width="309" height="32"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9j-Zb-Gne">
+                                <rect key="frame" x="349" y="25" width="45" height="45"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="QNc-oT-fho"/>
+                                    <constraint firstAttribute="width" constant="45" id="sgd-qe-e9q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addExercicioButton:" destination="M1l-7A-jf0" eventType="touchUpInside" id="MoH-VY-pF8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sL4-oo-rhO" firstAttribute="trailing" secondItem="Drx-Lr-1XP" secondAttribute="trailing" constant="20" id="2Ef-ca-8TI"/>
                             <constraint firstAttribute="bottom" secondItem="mlB-wN-nT1" secondAttribute="bottom" id="Cpt-ha-dqQ"/>
+                            <constraint firstItem="sL4-oo-rhO" firstAttribute="trailing" secondItem="X9j-Zb-Gne" secondAttribute="trailing" constant="20" id="DAV-Wi-s5N"/>
                             <constraint firstItem="mlB-wN-nT1" firstAttribute="leading" secondItem="sL4-oo-rhO" secondAttribute="leading" id="IaQ-uX-nQJ"/>
                             <constraint firstItem="Drx-Lr-1XP" firstAttribute="top" secondItem="sL4-oo-rhO" secondAttribute="top" constant="35" id="XlP-cV-NRO"/>
+                            <constraint firstItem="X9j-Zb-Gne" firstAttribute="leading" secondItem="Drx-Lr-1XP" secondAttribute="trailing" constant="20" id="bkb-06-7Kg"/>
                             <constraint firstItem="mlB-wN-nT1" firstAttribute="top" secondItem="Drx-Lr-1XP" secondAttribute="bottom" constant="20" id="cyA-IT-xZd"/>
+                            <constraint firstItem="X9j-Zb-Gne" firstAttribute="top" secondItem="sL4-oo-rhO" secondAttribute="top" constant="25" id="lsE-Be-vMD"/>
                             <constraint firstItem="mlB-wN-nT1" firstAttribute="trailing" secondItem="sL4-oo-rhO" secondAttribute="trailing" id="pN0-ey-u7S"/>
                             <constraint firstItem="Drx-Lr-1XP" firstAttribute="leading" secondItem="sL4-oo-rhO" secondAttribute="leading" constant="20" id="uOd-0J-ww3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sL4-oo-rhO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Exercícios" id="zTc-R7-upU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="73V-0C-x7w">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <navigationItem key="navigationItem" id="zTc-R7-upU">
+                        <barButtonItem key="rightBarButtonItem" title="Editar Treino" id="hEc-Qv-U9w">
                             <connections>
-                                <action selector="addExercicioButton:" destination="M1l-7A-jf0" id="zwT-ry-sKi"/>
+                                <action selector="editarExercicioSegue:" destination="M1l-7A-jf0" id="KyU-mw-Uho"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -714,11 +722,12 @@
                         <outlet property="tableViewExercicios" destination="mlB-wN-nT1" id="Zjs-mx-q1G"/>
                         <segue destination="Lj0-7O-9XS" kind="presentation" identifier="addExercicioSegue" id="Cgl-p3-5Aq"/>
                         <segue destination="NBU-5I-6Xx" kind="show" identifier="detalhesExercicioSegue" id="ASQ-ub-8Ef"/>
+                        <segue destination="tdB-Qd-DhP" kind="presentation" identifier="editarTreinoSegue" id="1hF-fa-2RA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTY-UJ-6jD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426.0869565217392" y="3193.5267857142858"/>
+            <point key="canvasLocation" x="1429" y="3302"/>
         </scene>
         <!--Criar Exercicio View Controller-->
         <scene sceneID="ehX-SD-Gej">
@@ -876,7 +885,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfE-e9-8db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2917" y="3575"/>
+            <point key="canvasLocation" x="3974" y="3301"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="nH5-LD-kgT">
@@ -1109,7 +1118,6 @@
         <image name="exercicio" width="800" height="445"/>
         <image name="gym-icon" width="37.5" height="37.5"/>
         <image name="logo" width="512" height="512"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person-icon" width="35" height="35"/>
         <image name="standard-user-picture" width="200" height="200"/>
     </resources>
