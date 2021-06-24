@@ -26,7 +26,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = treino["nome"] as? String
+        //self.title = treino["nome"] as? String
         nomeTreinoLabel.text = "Exercícios:"
         /*
         nomeTreinoLabel.text = treino["nome"] as? String
@@ -48,6 +48,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     override func viewDidAppear(_ animated: Bool) {
+        self.title = treino["nome"] as? String
         recuperarExercicios()
     }
     
@@ -142,6 +143,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         else if segue.identifier == "detalhesExercicioSegue" {
             let viewDestino = segue.destination as! DetalhesExercicioViewController
             viewDestino.exercicioDetalhes = sender as? Dictionary
+            viewDestino.treinoAux = treino
         }
         else if segue.identifier == "editarTreinoSegue" {
             let viewDestino = segue.destination as! EditarTreinoViewController

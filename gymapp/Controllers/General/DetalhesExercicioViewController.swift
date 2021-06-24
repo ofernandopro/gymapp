@@ -11,6 +11,7 @@ import UIKit
 class DetalhesExercicioViewController: UIViewController {
     
     var exercicioDetalhes: Dictionary<String, Any>!
+    var treinoAux: Dictionary<String, Any>!
     
     @IBOutlet weak var imagemDetalhesExercicio: UIImageView!
     @IBOutlet weak var nomeDetalhesExercicio: UILabel!
@@ -28,6 +29,19 @@ class DetalhesExercicioViewController: UIViewController {
             imagemDetalhesExercicio.image = UIImage(named: "imagem-padrao-exercicio")
         }
         
+    }
+    
+    
+    @IBAction func editarButton(_ sender: Any) {
+        performSegue(withIdentifier: "editarExercicioSegue", sender: exercicioDetalhes)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editarExercicioSegue" {
+            let viewDestino = segue.destination as! EditarExercicioViewController
+            viewDestino.exercicioEditar = sender as? Dictionary
+            viewDestino.treinoEditar = treinoAux
+        }
     }
 
 }

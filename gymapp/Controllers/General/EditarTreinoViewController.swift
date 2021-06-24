@@ -49,15 +49,15 @@ class EditarTreinoViewController: UIViewController {
                     exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o treino!")
                 } else {
                     
-                    if let idTreino = treinoEditar["id"] {
-                        db.collection("usuarios")
-                        .document(idUsuarioLogado)
-                        .collection("treinos")
-                        .document(String(describing: idTreino))
-                        .updateData([
-                                "nome": nomeTreino,
-                                "descricao": descricaoTreino
-                            ])
+                        if let idTreino = treinoEditar["id"] {
+                            db.collection("usuarios")
+                                .document(idUsuarioLogado)
+                                .collection("treinos")
+                                .document(String(describing: idTreino))
+                                .updateData([
+                                    "nome": nomeTreino,
+                                    "descricao": descricaoTreino
+                                ])
                         }
                         dismiss(animated: true, completion: nil)
                 
@@ -74,6 +74,15 @@ class EditarTreinoViewController: UIViewController {
         alerta.addAction(okAction)
         self.present(alerta, animated: true, completion: nil)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
     
 }

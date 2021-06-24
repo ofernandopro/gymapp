@@ -1,8 +1,8 @@
 //
-//  CriarExercicioViewController.swift
+//  EditarExercicioViewController.swift
 //  gymapp
 //
-//  Created by Fernando Moreira on 22/06/21.
+//  Created by Fernando Moreira on 24/06/21.
 //  Copyright © 2021 Fernando Moreira. All rights reserved.
 //
 
@@ -11,24 +11,26 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
 
-class CriarExercicioViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditarExercicioViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    var exercicioEditar: Dictionary<String, Any>!
+    var treinoEditar: Dictionary<String, Any>!
     
     @IBOutlet weak var nomeExercicioLabel: UITextField!
     @IBOutlet weak var imagemExercicio: UIImageView!
-    @IBOutlet weak var observacoesExercicioLabel: UITextView!
+    @IBOutlet weak var observacaoExercicio: UITextView!
     
     var auth: Auth!
     var storage: Storage!
     var db: Firestore!
     var urlImagem = ""
-    
-    var treinoExercicios: Dictionary<String, Any>!
-    
     var idUsuarioLogado: String!
-    var emailUsuarioLogado: String!
-    let uuid = UUID().uuidString
     var imagePicker = UIImagePickerController()
     
+    @IBAction func selecionarImagemButton(_ sender: Any) {
+        imagePicker.sourceType = .savedPhotosAlbum
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     @IBAction func cancelarButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -37,52 +39,29 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePicker.delegate = self
-        
         auth = Auth.auth()
         storage = Storage.storage()
         db = Firestore.firestore()
         
+        /*
+        nomeExercicioLabel.text = exercicioEditar["nome"] as? String
+        observacaoExercicio.text = exercicioEditar["observacao"] as? String
+        
+        if let imagemExercicioEditada = exercicioEditar["urlImagem"] as? String {
+            imagemExercicio.sd_setImage(with: URL(string: imagemExercicioEditada), completed: nil)
+        } else {
+            imagemExercicio.image = UIImage(named: "imagem-padrao-exercicio")
+        }
+         */
+        nomeExercicioLabel.text = exercicioEditar["nome"] as? String
+        observacaoExercicio.text = exercicioEditar["observacao"] as? String
+        
+        
         
         if let usuarioAtual = auth.currentUser {
             self.idUsuarioLogado = usuarioAtual.uid
-            self.emailUsuarioLogado = usuarioAtual.email
         }
 
-    }
-    
-    @IBAction func pegarImagemExercicioButton(_ sender: Any) {
-        imagePicker.sourceType = .savedPhotosAlbum
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
-    
-    @IBAction func salvarExercicioButton(_ sender: Any) {
-        
-        if let nomeExercicio = nomeExercicioLabel.text {
-            if let observacaoExercicio = observacoesExercicioLabel.text {
-                
-                if nomeExercicio == "" {
-                    exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o exercício!")
-                } else {
-                
-                    let dadosExercicio: Dictionary<String, Any> = [
-                        "id": uuid,
-                        "idUsuario": idUsuarioLogado!,
-                        "nome": nomeExercicio,
-                        "urlImagem": self.urlImagem,
-                        "observacao": observacaoExercicio
-                    ]
-                    
-                    salvarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
-                    
-                    self.salvarExercicioFirebase(dadosExercicio: dadosExercicio)
-                    
-                }
-                
-            }
-        }
-        
     }
     
     // Chama o método para salvar imagem no firebase ao finalizar
@@ -95,12 +74,12 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
         
         self.imagemExercicio.image = imagemRecuperada
         
-        //salvarImagemExercicioFirebase(imagemRecuperada: imagemRecuperada)
+        //atualizarImagemExercicioFirebase(imagemRecuperada: imagemRecuperada)
         
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
-    func salvarImagemExercicioFirebase(imagemRecuperada: UIImage) {
+    func atualizarImagemExercicioFirebase(imagemRecuperada: UIImage) {
         
         self.imagemExercicio.image = imagemRecuperada
         
@@ -129,9 +108,9 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
                                       .collection("usuarios")
                                     .document(idUsuario)
                                     .collection("treinos")
-                                        .document(self.treinoExercicios["id"] as! String)
+                                        .document(self.treinoEditar["id"] as! String)
                                     .collection("exercicios")
-                                        .document(self.uuid)
+                                        .document(self.exercicioEditar["id"] as! String)
                                       .updateData([
                                           "urlImagem": urlImagem
                                       ])
@@ -145,21 +124,40 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
             }
         }
     }
-        
     
-    func salvarExercicioFirebase(dadosExercicio: Dictionary<String, Any>) {
+    
+    
+    
+    
+    @IBAction func salvarButton(_ sender: Any) {
         
-        if let idExercicio = dadosExercicio["id"] {
-            db.collection("usuarios")
-            .document(idUsuarioLogado)
-            .collection("treinos")
-            .document(self.treinoExercicios["id"] as! String)
-            .collection("exercicios")
-            .document(String(describing: idExercicio))
-                .setData(dadosExercicio) { (error) in
-                    if error == nil {
-                        self.dismiss(animated: true, completion: nil)
+        if let nomeExercicio = nomeExercicioLabel.text {
+            if let observacaoExercicio = observacaoExercicio.text {
+                
+                if nomeExercicio == "" {
+                    exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o exercício!")
+                } else {
+                
+                    if let idTreino = treinoEditar["id"] {
+                        db.collection("usuarios")
+                            .document(idUsuarioLogado)
+                            .collection("treinos")
+                            .document(String(describing: idTreino))
+                        .collection("exercicios")
+                        .document(exercicioEditar["id"] as! String)
+                            .updateData([
+                                "nome": nomeExercicio,
+                                "observacao": observacaoExercicio
+                            ])
                     }
+                    
+                    atualizarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
+                    
+                    
+                    dismiss(animated: true, completion: nil)
+                    
+                }
+                
             }
         }
         
