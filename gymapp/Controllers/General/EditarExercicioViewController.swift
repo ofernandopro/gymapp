@@ -43,6 +43,8 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
         storage = Storage.storage()
         db = Firestore.firestore()
         
+        imagePicker.delegate = self
+        
         /*
         nomeExercicioLabel.text = exercicioEditar["nome"] as? String
         observacaoExercicio.text = exercicioEditar["observacao"] as? String
@@ -55,7 +57,11 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
          */
         nomeExercicioLabel.text = exercicioEditar["nome"] as? String
         observacaoExercicio.text = exercicioEditar["observacao"] as? String
-        
+        if let imagemExercicioEditado = exercicioEditar["urlImagem"] as? String {
+            imagemExercicio.sd_setImage(with: URL(string: imagemExercicioEditado), completed: nil)
+        } else {
+            imagemExercicio.image = UIImage(named: "imagem-padrao-exercicio")
+        }
         
         
         if let usuarioAtual = auth.currentUser {
@@ -155,6 +161,7 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
                     
                     
                     dismiss(animated: true, completion: nil)
+                    
                     
                 }
                 

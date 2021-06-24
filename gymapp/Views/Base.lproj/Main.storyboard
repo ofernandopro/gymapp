@@ -592,7 +592,7 @@
         <!--Exercicios View Controller-->
         <scene sceneID="sfP-1B-AJf">
             <objects>
-                <viewController id="M1l-7A-jf0" customClass="ExerciciosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="M1l-7A-jf0" customClass="ExerciciosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="suO-Ms-MH7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

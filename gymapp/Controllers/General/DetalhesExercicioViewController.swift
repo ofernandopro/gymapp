@@ -20,6 +20,9 @@ class DetalhesExercicioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         nomeDetalhesExercicio.text = exercicioDetalhes["nome"] as? String
         observacaoDetalhesExercicio.text = exercicioDetalhes["observacao"] as? String
         
@@ -28,7 +31,6 @@ class DetalhesExercicioViewController: UIViewController {
         } else {
             imagemDetalhesExercicio.image = UIImage(named: "imagem-padrao-exercicio")
         }
-        
     }
     
     

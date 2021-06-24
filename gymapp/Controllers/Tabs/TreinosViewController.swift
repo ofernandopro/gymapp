@@ -39,6 +39,9 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         //self.checaSeEstaLogado()
         self.recuperarTreinos()
+        
+        
+        
     }
     
     func recuperarTreinos() {
@@ -54,7 +57,6 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
                         
                         let dadosTreino = document.data()
                         self.listaTreinos.append(dadosTreino)
-                        
                     }
                     self.treinosTableView.reloadData()
                 }
@@ -151,6 +153,15 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         }
             
+    }
+    
+    func exibirMensagem(titulo: String, mensagem: String) {
+        
+        let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alerta.addAction(okAction)
+        self.present(alerta, animated: true, completion: nil)
+        
     }
         
 
