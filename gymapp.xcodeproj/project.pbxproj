@@ -35,7 +35,7 @@
 		C44FF9172682327D00A6D572 /* ExerciciosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciciosViewController.swift; sourceTree = "<group>"; };
 		C44FF919268254AB00A6D572 /* CriarExercicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarExercicioViewController.swift; sourceTree = "<group>"; };
 		C461DCAA2684CC07005A1C60 /* EditarExercicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarExercicioViewController.swift; sourceTree = "<group>"; };
-		C4B20893268128F200032FC8 /* gymapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gymapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B20893268128F200032FC8 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B20896268128F200032FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4B20898268128F200032FC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4B2089D268128F200032FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		C4B20894268128F200032FC8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4B20893268128F200032FC8 /* gymapp.app */,
+				C4B20893268128F200032FC8 /* GymApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			);
 			name = gymapp;
 			productName = gymapp;
-			productReference = C4B20893268128F200032FC8 /* gymapp.app */;
+			productReference = C4B20893268128F200032FC8 /* GymApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -472,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fernandomoreira.gymapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GymApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -490,7 +490,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fernandomoreira.gymapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GymApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
