@@ -64,5 +64,5 @@ Para deletar um exercício, basta ir na tela de exercícios, arrastar o exercíc
 
 Para editar um exercício, clique no exercício que deseja e uma tela aparecerá com os detalhes do mesmo. Clique em "Editar" e uma tela aparecerá com os dados atuais do exercício, possibilitando-o editá-lo. Após terminado, clique no botão salvar.
 
-
+<br />
 Fernando Moreira - fernandoepm.pro@gmail.com - GymApp
