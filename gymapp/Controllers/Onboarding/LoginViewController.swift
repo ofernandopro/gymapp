@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var senhaLabel: UITextField!
     
     var auth: Auth!
+    
     var handler: AuthStateDidChangeListenerHandle!
     
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class LoginViewController: UIViewController {
     }
     
     // Verifica se o usuário está logado ou não (usado para redirecionar
-    // o usuário para a tela de login se não estiver logado):
+    // o usuário para a tela de treinos se já estiver logado):
     func checaSeEstaLogado() {
         handler = auth.addStateDidChangeListener { (authentication, user) in
             if user != nil {
@@ -73,18 +74,27 @@ class LoginViewController: UIViewController {
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
+        
         self.present(alerta, animated: true, completion: nil)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        // Remove listener que checa se usuário está ou não
+        // logado quando o usuário sai da tela de login
         auth.removeStateDidChangeListener(handler)
         
         super.viewWillAppear(animated)
+        
+        // Configura a cor da Status Bar para branco
         setNeedsStatusBarAppearanceUpdate()
+        
     }
     
+    // Configura a cor da Status Bar para branco
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }

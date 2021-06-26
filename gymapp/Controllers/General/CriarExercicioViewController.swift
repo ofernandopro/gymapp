@@ -20,15 +20,13 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
     var auth: Auth!
     var storage: Storage!
     var db: Firestore!
+    
     var urlImagem = ""
-    
     var treinoExercicios: Dictionary<String, Any>!
-    
     var idUsuarioLogado: String!
     var emailUsuarioLogado: String!
     let uuid = UUID().uuidString
     var imagePicker = UIImagePickerController()
-    
     
     @IBAction func cancelarButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -43,7 +41,6 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
         storage = Storage.storage()
         db = Firestore.firestore()
         
-        
         if let usuarioAtual = auth.currentUser {
             self.idUsuarioLogado = usuarioAtual.uid
             self.emailUsuarioLogado = usuarioAtual.email
@@ -56,14 +53,13 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
         present(imagePicker, animated: true, completion: nil)
     }
     
-    
     @IBAction func salvarExercicioButton(_ sender: Any) {
         
         if let nomeExercicio = nomeExercicioLabel.text {
             if let observacaoExercicio = observacoesExercicioLabel.text {
                 
                 if nomeExercicio == "" {
-                    exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o exercício!")
+                    self.exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o exercício!")
                 } else {
                 
                     let dadosExercicio: Dictionary<String, Any> = [
@@ -75,8 +71,7 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
                         "data": FieldValue.serverTimestamp()
                     ]
                     
-                    salvarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
-                    
+                    self.salvarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
                     self.salvarExercicioFirebase(dadosExercicio: dadosExercicio)
                     
                 }
@@ -95,9 +90,6 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
         ] as! UIImage
         
         self.imagemExercicio.image = imagemRecuperada
-        
-        //salvarImagemExercicioFirebase(imagemRecuperada: imagemRecuperada)
-        
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
@@ -142,11 +134,11 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
                         } else {
                             self.exibirMensagem(titulo: "Erro", mensagem: "Erro ao atualizar a imagem do exercício. Tente novamente!")
                         }
+                        
                 }
             }
         }
     }
-        
     
     func salvarExercicioFirebase(dadosExercicio: Dictionary<String, Any>) {
         
@@ -171,15 +163,19 @@ class CriarExercicioViewController: UIViewController, UIImagePickerControllerDel
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
+        
         self.present(alerta, animated: true, completion: nil)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Configura a cor da Status Bar para branco
         setNeedsStatusBarAppearanceUpdate()
     }
     
+    // Configura a cor da Status Bar para branco
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }

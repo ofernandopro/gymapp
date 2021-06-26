@@ -45,16 +45,16 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
         
         imagePicker.delegate = self
         
-        /*
-        nomeExercicioLabel.text = exercicioEditar["nome"] as? String
-        observacaoExercicio.text = exercicioEditar["observacao"] as? String
+        self.recuperarDadosUsuario()
         
-        if let imagemExercicioEditada = exercicioEditar["urlImagem"] as? String {
-            imagemExercicio.sd_setImage(with: URL(string: imagemExercicioEditada), completed: nil)
-        } else {
-            imagemExercicio.image = UIImage(named: "imagem-padrao-exercicio")
+        if let usuarioAtual = auth.currentUser {
+            self.idUsuarioLogado = usuarioAtual.uid
         }
-         */
+
+    }
+    
+    func recuperarDadosUsuario() {
+        
         nomeExercicioLabel.text = exercicioEditar["nome"] as? String
         observacaoExercicio.text = exercicioEditar["observacao"] as? String
         if let imagemExercicioEditado = exercicioEditar["urlImagem"] as? String {
@@ -63,11 +63,6 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
             imagemExercicio.image = UIImage(named: "imagem-padrao-exercicio")
         }
         
-        
-        if let usuarioAtual = auth.currentUser {
-            self.idUsuarioLogado = usuarioAtual.uid
-        }
-
     }
     
     // Chama o método para salvar imagem no firebase ao finalizar
@@ -79,9 +74,6 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
         ] as! UIImage
         
         self.imagemExercicio.image = imagemRecuperada
-        
-        //atualizarImagemExercicioFirebase(imagemRecuperada: imagemRecuperada)
-        
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
@@ -101,7 +93,6 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
                 
                 let idUsuario = usuarioLogado.uid
                 let nomeImagem = "\(uuid).jpg"
-                
                 
                 let fotoPerfilRef = imagens.child("exercicio").child(nomeImagem)
                     fotoPerfilRef.putData(imagemUpload, metadata: nil) { (metaData, error) in
@@ -126,14 +117,11 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
                         } else {
                             self.exibirMensagem(titulo: "Erro", mensagem: "Erro ao atualizar a imagem do exercício. Tente novamente!")
                         }
+                        
                 }
             }
         }
     }
-    
-    
-    
-    
     
     @IBAction func salvarButton(_ sender: Any) {
         
@@ -141,7 +129,7 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
             if let observacaoExercicio = observacaoExercicio.text {
                 
                 if nomeExercicio == "" {
-                    exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o exercício!")
+                    self.exibirMensagem(titulo: "Erro", mensagem: "Digite um nome para o exercício!")
                 } else {
                 
                     if let idTreino = treinoEditar["id"] {
@@ -157,11 +145,9 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
                             ])
                     }
                     
-                    atualizarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
-                    
+                    self.atualizarImagemExercicioFirebase(imagemRecuperada: self.imagemExercicio.image!)
                     
                     dismiss(animated: true, completion: nil)
-                    
                     
                 }
                 
@@ -175,15 +161,19 @@ class EditarExercicioViewController: UIViewController, UIImagePickerControllerDe
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
+        
         self.present(alerta, animated: true, completion: nil)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Configura a cor da Status Bar para branco
         setNeedsStatusBarAppearanceUpdate()
     }
     
+    // Configura a cor da Status Bar para branco
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }

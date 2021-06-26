@@ -19,6 +19,7 @@ class EditarTreinoViewController: UIViewController {
     
     var auth: Auth!
     var db: Firestore!
+    
     var idUsuarioLogado: String!
     
     @IBAction func cancelarButton(_ sender: Any) {
@@ -28,8 +29,7 @@ class EditarTreinoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nomeTreinoEditado.text = treinoEditar["nome"] as? String
-        descricaoTreinoEditado.text = treinoEditar["descricao"] as? String
+        self.recuperarDadosUsuario()
         
         auth = Auth.auth()
         db = Firestore.firestore()
@@ -37,6 +37,13 @@ class EditarTreinoViewController: UIViewController {
         if let usuarioAtual = auth.currentUser {
             self.idUsuarioLogado = usuarioAtual.uid
         }
+        
+    }
+    
+    func recuperarDadosUsuario() {
+        
+        nomeTreinoEditado.text = treinoEditar["nome"] as? String
+        descricaoTreinoEditado.text = treinoEditar["descricao"] as? String
         
     }
     
@@ -72,15 +79,19 @@ class EditarTreinoViewController: UIViewController {
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
+        
         self.present(alerta, animated: true, completion: nil)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Configura a cor da Status Bar para branco
         setNeedsStatusBarAppearanceUpdate()
     }
     
+    // Configura a cor da Status Bar para branco
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }

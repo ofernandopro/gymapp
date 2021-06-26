@@ -27,7 +27,6 @@ class CriarTreinoViewController: UIViewController {
         auth = Auth.auth()
         db = Firestore.firestore()
         
-        
         if let usuarioAtual = auth.currentUser {
             self.idUsuarioLogado = usuarioAtual.uid
             self.emailUsuarioLogado = usuarioAtual.email
@@ -85,18 +84,21 @@ class CriarTreinoViewController: UIViewController {
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
+        
         self.present(alerta, animated: true, completion: nil)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Configura a cor da Status Bar para branco
         setNeedsStatusBarAppearanceUpdate()
     }
     
+    // Configura a cor da Status Bar para branco
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
-    
     
 }

@@ -22,6 +22,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
     var auth: Auth!
     var storage: Storage!
     var db: Firestore!
+    
     var imagePicker = UIImagePickerController()
     var idUsuario: String!
     
@@ -129,12 +130,11 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    // fazer logout
+    // Fazer logout
     @IBAction func sairButton(_ sender: Any) {
         
         do {
             try auth.signOut()
-            //dismiss(animated: true, completion: nil)
             self.performSegue(withIdentifier: "sairSegue", sender: nil)
         } catch {
             self.exibirMensagem(titulo: "Erro", mensagem: "Erro ao deslogar. Tente novamente!")
@@ -147,6 +147,7 @@ class PerfilViewController: UIViewController, UIImagePickerControllerDelegate, U
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
+        
         self.present(alerta, animated: true, completion: nil)
         
     }

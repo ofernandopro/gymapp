@@ -13,9 +13,10 @@ import FirebaseFirestore
 class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var treinosTableView: UITableView!
+    
     var auth: Auth!
-    var handler: AuthStateDidChangeListenerHandle!
     var db: Firestore!
+    
     var idUsuarioLogado: String!
     var listaTreinos: [Dictionary<String, Any>] = []
     
@@ -31,17 +32,11 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         treinosTableView.separatorStyle = .none
-        
-        //self.checaSeEstaLogado()
-
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //self.checaSeEstaLogado()
         self.recuperarTreinos()
-        
-        
-        
     }
     
     func recuperarTreinos() {
@@ -62,17 +57,6 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
         }
     }
-    
-    /*
-    // Verifica se o usuário está logado ou não (usado para redirecionar
-    // o usuário para a tela de login se não estiver logado):
-    func checaSeEstaLogado() {
-        handler = auth.addStateDidChangeListener { (authentication, user) in
-            if user == nil {
-                self.performSegue(withIdentifier: "toLoginSegue", sender: nil)
-            }
-        }
-    }*/
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -98,7 +82,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         celula.dataTreino.text = data.asString()
         
         return celula
-                    
+        
     }
     
     // Usado para abrir a tela de exercícios ao clicar em um treino:
@@ -119,10 +103,6 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        //auth.removeStateDidChangeListener(handler)
-    }
-    
     // Método para remover Treino
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -137,17 +117,9 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
                 .document(dadosTreino["id"] as! String)
               .delete()
             
-            /*
-            self.db
-              .collection("usuarios")
-            .document(idUsuarioLogado)
-            .collection("treinos")
-                .document(dadosTreino["id"] as! String)
-            .collection("exercicios")
-                .document()
-            */
             // Removendo do Array
             self.listaTreinos.remove(at: indexPath.row)
+            
             // Removendo da Table View
             self.treinosTableView.deleteRows(at: [indexPath], with: .automatic)
             
@@ -160,6 +132,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alerta.addAction(okAction)
+        
         self.present(alerta, animated: true, completion: nil)
         
     }
@@ -167,6 +140,7 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 }
 
+// Extension para recuperar data formatada em dd/MM/yyyy
 extension Date {
     func asString() -> String {
         let dataFormatada = DateFormatter()

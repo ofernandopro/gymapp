@@ -20,35 +20,27 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     var listaExercicios: [Dictionary<String, Any>] = []
     
     @IBOutlet weak var tableViewExercicios: UITableView!
-    @IBOutlet weak var nomeTreinoLabel: UILabel!
-    @IBOutlet weak var descricaoTreinoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.title = treino["nome"] as? String
-        nomeTreinoLabel.text = "Exercícios"
-        /*
-        nomeTreinoLabel.text = treino["nome"] as? String
-        descricaoTreinoLabel.text = treino["descricao"] as? String
-        */
-                 
+                         
         tableViewExercicios.separatorStyle = .none
         
         auth = Auth.auth()
         db = Firestore.firestore()
         
-        // Recupera id do usuário logado:
-        if let id = auth.currentUser?.uid {
-            self.idUsuarioLogado = id
-        }
+        self.recuperaIdLogado()
         
     }
     
-    
+    // Recupera id do usuário logado:
+    func recuperaIdLogado() {
+        if let id = auth.currentUser?.uid {
+            self.idUsuarioLogado = id
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
-        //self.title = treino["nome"] as? String
         recuperarExercicios()
     }
     
@@ -77,11 +69,9 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
-    
     @IBAction func editarExercicioSegue(_ sender: Any) {
         performSegue(withIdentifier: "editarTreinoSegue", sender: treino)
     }
-    
     
     @IBAction func addExercicioButton(_ sender: Any) {
         performSegue(withIdentifier: "addExercicioSegue", sender: self.treino)
@@ -93,20 +83,12 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let totalExercicios = self.listaExercicios.count
-
         return totalExercicios
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let celula = tableView.dequeueReusableCell(withIdentifier: "exercicioCelula", for: indexPath) as! ExercicioTableViewCell
-        
-        if self.listaExercicios.count == 0 {
-            celula.nomeExercicioLabel.text = "Adicione um Exercício!"
-            celula.observacaoExercicioLabel.text = "Adicione um exercício para começar a treinar!"
-            celula.exercicioImagem.image = UIImage(named: "imagem-padrao-exercicio")
-            return celula
-        }
         
         let dadosExercicio = self.listaExercicios[indexPath.row]
         
@@ -170,12 +152,12 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
                 
                 // Removendo do Array
                 self.listaExercicios.remove(at: indexPath.row)
+            
                 // Removendo da Table View
                 self.tableViewExercicios.deleteRows(at: [indexPath], with: .automatic)
             
         }
             
     }
-    
 
 }

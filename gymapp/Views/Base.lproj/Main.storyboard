@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,7 @@
         <!--Crie uma Conta-->
         <scene sceneID="bhW-pn-tsa">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="laf-iK-5gc" customClass="CriarContaViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="laf-iK-5gc" customClass="CriarContaViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJ0-86-0RJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +250,7 @@
         <!--Editar Treino View Controller-->
         <scene sceneID="WNI-TV-VNf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="tdB-Qd-DhP" customClass="EditarTreinoViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="tdB-Qd-DhP" customClass="EditarTreinoViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PL1-I2-l1N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -365,7 +365,7 @@
         <!--Treinos-->
         <scene sceneID="tzg-Ju-cDa">
             <objects>
-                <viewController id="g7F-hG-Jyv" customClass="TreinosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g7F-hG-Jyv" customClass="TreinosViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xmk-r9-Gm6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,7 +374,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treinoCelula" rowHeight="149" id="8eS-Aw-5jO" customClass="TreinoTableViewCell" customModule="gymapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="treinoCelula" rowHeight="149" id="8eS-Aw-5jO" customClass="TreinoTableViewCell" customModule="GymApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8eS-Aw-5jO" id="3dJ-AH-7Ee">
@@ -478,7 +478,7 @@
         <!--Criar Treino View Controller-->
         <scene sceneID="NFS-BV-FxJ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ldR-6N-w8B" customClass="CriarTreinoViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ldR-6N-w8B" customClass="CriarTreinoViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDg-Ab-dtx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -592,7 +592,7 @@
         <!--Exercicios View Controller-->
         <scene sceneID="sfP-1B-AJf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="M1l-7A-jf0" customClass="ExerciciosViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="M1l-7A-jf0" customClass="ExerciciosViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="suO-Ms-MH7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -601,7 +601,7 @@
                                 <rect key="frame" x="0.0" y="87" width="414" height="638"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exercicioCelula" rowHeight="324" id="2Xv-AH-zp4" customClass="ExercicioTableViewCell" customModule="gymapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exercicioCelula" rowHeight="324" id="2Xv-AH-zp4" customClass="ExercicioTableViewCell" customModule="GymApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="324"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Xv-AH-zp4" id="sZA-8l-hwX">
@@ -676,7 +676,7 @@
                                     <outlet property="delegate" destination="M1l-7A-jf0" id="KnK-vU-DHh"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-Lr-1XP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercícios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drx-Lr-1XP">
                                 <rect key="frame" x="20" y="35" width="309" height="32"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -725,7 +725,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="nomeTreinoLabel" destination="Drx-Lr-1XP" id="dde-zc-jrd"/>
                         <outlet property="tableViewExercicios" destination="mlB-wN-nT1" id="Zjs-mx-q1G"/>
                         <segue destination="Lj0-7O-9XS" kind="presentation" identifier="addExercicioSegue" id="Cgl-p3-5Aq"/>
                         <segue destination="NBU-5I-6Xx" kind="show" identifier="detalhesExercicioSegue" id="ASQ-ub-8Ef"/>
@@ -739,7 +738,7 @@
         <!--Criar Exercicio View Controller-->
         <scene sceneID="ehX-SD-Gej">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Lj0-7O-9XS" customClass="CriarExercicioViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Lj0-7O-9XS" customClass="CriarExercicioViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ml-cW-scx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -897,7 +896,7 @@
         <!--Perfil-->
         <scene sceneID="nH5-LD-kgT">
             <objects>
-                <viewController id="iqQ-Ei-ktw" customClass="PerfilViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iqQ-Ei-ktw" customClass="PerfilViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="68A-W0-5bO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -976,7 +975,7 @@
         <!--Detalhes Exercicio View Controller-->
         <scene sceneID="EIA-x5-7Wd">
             <objects>
-                <viewController id="NBU-5I-6Xx" customClass="DetalhesExercicioViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="NBU-5I-6Xx" customClass="DetalhesExercicioViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XdC-Wj-KAR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -987,14 +986,14 @@
                                     <constraint firstAttribute="height" constant="180" id="WwL-3i-6wR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-D7-Poc">
-                                <rect key="frame" x="25" y="284" width="364" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4R-D7-Poc">
+                                <rect key="frame" x="25" y="255" width="364" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su0-EI-5Ur">
-                                <rect key="frame" x="20" y="205" width="374" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su0-EI-5Ur">
+                                <rect key="frame" x="20" y="205" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1035,7 +1034,7 @@
         <!--Editar Exercicio View Controller-->
         <scene sceneID="cMu-9a-GSr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="arl-Uw-6NX" customClass="EditarExercicioViewController" customModule="gymapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="arl-Uw-6NX" customClass="EditarExercicioViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Xb-jw-bak">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1179,6 +1178,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ew8-Mm-3BZ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="j7B-ts-3jk"/>
                     <connections>
                         <outlet property="imagemExercicio" destination="Cod-JE-MqI" id="ANs-8Z-UYN"/>
                         <outlet property="nomeExercicioLabel" destination="dSD-0r-0FA" id="8gF-Dq-BWN"/>
