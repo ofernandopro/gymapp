@@ -106,19 +106,11 @@
 			children = (
 				C4B208AD2681291D00032FC8 /* Resources */,
 				C4B208AB2681290800032FC8 /* Views */,
-				C4B208AA2681290100032FC8 /* Models */,
 				C4B208AC2681290D00032FC8 /* Controllers */,
 				C4B208A4268128F400032FC8 /* Info.plist */,
 				C4B208AE268129F700032FC8 /* GoogleService-Info.plist */,
 			);
 			path = gymapp;
-			sourceTree = "<group>";
-		};
-		C4B208AA2681290100032FC8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		C4B208AB2681290800032FC8 /* Views */ = {

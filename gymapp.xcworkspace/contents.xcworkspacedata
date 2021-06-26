@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "assets">
+      <FileRef
+         location = "group:/Users/fernandomoreira/Desktop/iOS/gymapp/screenshots.png">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
    <FileRef
       location = "group:gymapp.xcodeproj">
    </FileRef>

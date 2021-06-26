@@ -88,11 +88,13 @@ class TreinosViewController: UIViewController, UITableViewDelegate, UITableViewD
     // Usado para abrir a tela de exercícios ao clicar em um treino:
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.treinosTableView.deselectRow(at: indexPath, animated: true)
-        let index = indexPath.row
-        let treino = self.listaTreinos[index]
-        
-        self.performSegue(withIdentifier: "exerciciosSegue", sender: treino)
+        if self.listaTreinos.count > 0 {
+            self.treinosTableView.deselectRow(at: indexPath, animated: true)
+            let index = indexPath.row
+            let treino = self.listaTreinos[index]
+            
+            self.performSegue(withIdentifier: "exerciciosSegue", sender: treino)
+        }
         
     }
     
