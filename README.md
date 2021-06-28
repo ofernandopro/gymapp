@@ -3,9 +3,7 @@
 Aplicativo para gerenciar treinos e exercícios de musculação para iOS. Crie, edite ou remova treinos e, em cada treino, crie, edite ou remova exercícios para o seu treino do dia-a-dia. Crie seu perfil e comece a treinar!
 
 <br />
-<br />
 <img src="assets/screenshots.png" alt="GymApp Screenshots" />
-<br />
 <br />
 
 ## Features (Recursos)
