@@ -18,6 +18,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     var db: Firestore!
     var idUsuarioLogado: String!
     var listaExercicios: [Dictionary<String, Any>] = []
+    var exerciciosListener: ListenerRegistration!
     
     @IBOutlet weak var tableViewExercicios: UITableView!
     
@@ -38,35 +39,6 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         if let id = auth.currentUser?.uid {
             self.idUsuarioLogado = id
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        recuperarExercicios()
-    }
-    
-    func recuperarExercicios() {
-        
-        self.listaExercicios.removeAll()
-        db.collection("usuarios")
-        .document(idUsuarioLogado)
-        .collection("treinos")
-        .document(treino["id"] as! String)
-        .collection("exercicios")
-            .order(by: "data", descending: true)
-            .getDocuments { (snapshotResult, error) in
-                
-                if let snapshot = snapshotResult {
-                    for document in snapshot.documents {
-                        
-                        let dadosExercicio = document.data()
-                        self.listaExercicios.append(dadosExercicio)
-                        
-                    }
-                    self.tableViewExercicios.reloadData()
-                }
-                
-        }
-        
     }
     
     @IBAction func editarExercicioSegue(_ sender: Any) {
@@ -159,5 +131,41 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         }
             
     }
+    
+    func addListenerRecuperarExercicios() {
 
+        exerciciosListener =
+            db.collection("usuarios")
+            .document(idUsuarioLogado)
+            .collection("treinos")
+            .document(treino["id"] as! String)
+            .collection("exercicios")
+                .order(by: "data", descending: true)
+                .addSnapshotListener { (querSnapshot, error) in
+                    
+                    if error == nil {
+                        
+                        self.listaExercicios.removeAll()
+                        
+                        if let snapshot = querSnapshot {
+                            for document in snapshot.documents {
+                                let data = document.data()
+                                self.listaExercicios.append(data)
+                            }
+                            self.tableViewExercicios.reloadData()
+                        }
+                    }
+            }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addListenerRecuperarExercicios()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        exerciciosListener.remove()
+    }
+    
+ 
 }
