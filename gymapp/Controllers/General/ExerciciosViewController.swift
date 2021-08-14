@@ -24,7 +24,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                         
+        
         tableViewExercicios.separatorStyle = .none
         
         auth = Auth.auth()
@@ -67,6 +67,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         celula.nomeExercicioLabel.text = dadosExercicio["nome"] as? String
         celula.observacaoExercicioLabel.text = dadosExercicio["observacao"] as? String
         
+        //teste
         if let imagemExercicio = dadosExercicio["urlImagem"] as? String {
             celula.exercicioImagem.sd_setImage(with: URL(string: imagemExercicio), completed: nil)
         } else {
