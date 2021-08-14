@@ -67,7 +67,7 @@ class ExerciciosViewController: UIViewController, UITableViewDelegate, UITableVi
         celula.nomeExercicioLabel.text = dadosExercicio["nome"] as? String
         celula.observacaoExercicioLabel.text = dadosExercicio["observacao"] as? String
         
-        //teste
+        //teste 2
         if let imagemExercicio = dadosExercicio["urlImagem"] as? String {
             celula.exercicioImagem.sd_setImage(with: URL(string: imagemExercicio), completed: nil)
         } else {
